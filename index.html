@@ -722,15 +722,6 @@ section{
     }
 }
 
-/* NOISE LAYER (film realism) */
-.noise-layer {
-    position: absolute;
-    inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/noise.png");
-    opacity: 0.05;
-    z-index: 3;
-    pointer-events: none;
-}
 
 /* CONTENT */
 .content-box {
@@ -927,11 +918,11 @@ section{
 <body>
 
 <!-- PRELOADER -->
-<!-- <div id="preloader">
+<div id="preloader">
   <video id="preloader-video" autoplay muted playsinline>
     <source src="/Videos/bio-preloder-2-2.mp4" type="video/mp4">
   </video>
-</div> -->
+</div>
 
 <!-- NAV -->
 <nav class="navbar navbar-expand-lg sticky-top">
@@ -1121,7 +1112,6 @@ section{
   </video> <!-- DARK CORE LAYER -->
   <div class="video-overlay"></div> <!-- LIGHT SCAN BEAM -->
   <div class="scan-beam"></div> <!-- GRAIN NOISE -->
-  <div class="noise-layer"></div> <!-- CONTENT LAYER -->
   <div class="container">
       <div class="content-box">
           <div class="kicker">INDUSTRIAL FUEL ENGINEERING</div>
