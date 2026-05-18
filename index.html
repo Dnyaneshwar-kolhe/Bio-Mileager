@@ -40,6 +40,22 @@ body{
   overflow-x:hidden;
 }
 
+.tech-bg{
+  position:fixed;
+  inset:0;
+
+  background-image:
+  linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size:60px 60px;
+
+  mask-image:
+  radial-gradient(circle at center, black 40%, transparent 95%);
+
+  z-index:-2;
+}
+
 
 
 /* ================= PRELOADER ================= */
@@ -1309,13 +1325,14 @@ video{
 </head>
 
 <body>
+  <div class="tech-bg"></div>
 
 <!-- PRELOADER -->
-<div id="preloader">
+<!-- <div id="preloader">
   <video id="preloader-video" autoplay muted playsinline>
     <source src="/Videos/bio-preloder.mp4" type="video/mp4">
   </video>
-</div>
+</div> -->
 
 <!-- NAV -->
 <nav class="navbar navbar-expand-lg sticky-top">
@@ -1332,7 +1349,7 @@ video{
           <a class="nav-link" href="#"><i class="bi bi-house-door"></i> Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-box-seam"></i> Products</a>
+          <a class="nav-link" href="/pages/product.html"><i class="bi bi-box-seam"></i> Products</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="bi bi-building"></i> About Us</a>
