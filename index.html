@@ -879,7 +879,312 @@ section{
 
 
 /* Media */
+/* =========================================================
+   FULL RESPONSIVE SYSTEM
+========================================================= */
 
+/* Large Tablets */
+@media (max-width: 1200px){
+
+.hero h1{
+  font-size: clamp(42px, 6vw, 62px);
+}
+
+.content-box h2{
+  font-size: 48px;
+}
+
+.grid{
+  gap:16px;
+}
+
+}
+
+
+/* Tablets */
+@media (max-width: 991px){
+
+section{
+  padding:70px 0;
+}
+
+.navbar{
+  padding:14px 0;
+}
+
+.hero{
+  min-height:auto;
+  padding:120px 0 80px;
+  text-align:center;
+}
+
+.hero .row{
+  row-gap:50px;
+}
+
+.hero .text-start{
+  text-align:center !important;
+}
+
+.hero p{
+  margin:auto;
+}
+
+.hero-product{
+  max-width:320px;
+  width:100%;
+}
+
+.hero-bg-text{
+  font-size: clamp(60px, 12vw, 120px);
+  opacity:0.08;
+}
+
+.grid{
+  grid-template-columns:1fr 1fr;
+}
+
+.big,
+.wide{
+  grid-column:span 2;
+}
+
+.tall{
+  grid-column:span 2;
+  height:420px;
+}
+
+.about-cinematic{
+  height:auto;
+  min-height:100vh;
+  padding:100px 0;
+}
+
+.content-box{
+  max-width:100%;
+}
+
+.content-box h2{
+  font-size:44px;
+}
+
+.meta{
+  gap:30px;
+}
+
+}
+
+
+/* Mobile Devices */
+@media (max-width: 768px){
+
+body{
+  overflow-x:hidden;
+}
+
+section{
+  padding:60px 0;
+}
+
+.container{
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.hero{
+  padding-top:120px;
+  padding-bottom:60px;
+}
+
+.hero h1{
+  font-size: clamp(34px, 9vw, 48px);
+  line-height:1.1;
+}
+
+.hero p{
+  font-size:15px;
+  max-width:100%;
+}
+
+.btn-primary{
+  width:100%;
+  max-width:320px;
+}
+
+.hero-product{
+  max-width:260px;
+}
+
+.hero-bg-text{
+  font-size: clamp(50px, 18vw, 90px);
+  letter-spacing:3px;
+}
+
+.grid{
+  grid-template-columns:1fr;
+}
+
+.big,
+.wide,
+.tall{
+  grid-column:span 1;
+  grid-row:span 1;
+}
+
+.card-pro{
+  padding:22px;
+}
+
+.card-pro h2{
+  font-size:28px;
+}
+
+.card-pro h3{
+  font-size:22px;
+}
+
+.tall{
+  height:350px;
+}
+
+.trust{
+  gap:12px;
+}
+
+.trust div{
+  width:calc(50% - 10px);
+  text-align:center;
+  font-size:14px;
+}
+
+.about-cinematic{
+  min-height:auto;
+  padding:80px 0;
+}
+
+.content-box{
+  text-align:left;
+}
+
+.content-box h2{
+  font-size:34px;
+  line-height:1.1;
+}
+
+.content-box p{
+  font-size:14px;
+  line-height:1.7;
+}
+
+.meta{
+  flex-direction:column;
+  gap:20px;
+}
+
+.process-step{
+  font-size:15px;
+  padding:16px;
+}
+
+.footer-industry{
+  text-align:center;
+}
+
+.footer-links{
+  padding:0;
+}
+
+.whatsapp{
+  width:50px;
+  height:50px;
+  right:15px;
+  bottom:20px;
+  font-size:20px;
+}
+
+}
+
+
+/* Small Mobiles */
+@media (max-width: 480px){
+
+.navbar-brand{
+  font-size:18px;
+}
+
+.hero{
+  padding-top:100px;
+}
+
+.hero h1{
+  font-size:32px;
+}
+
+.hero p{
+  font-size:14px;
+}
+
+.hero-product{
+  max-width:220px;
+}
+
+.btn-primary{
+  padding:12px 20px;
+  font-size:14px;
+}
+
+.card-pro{
+  padding:18px;
+  border-radius:12px;
+}
+
+.card-pro h2{
+  font-size:24px;
+}
+
+.content-box h2{
+  font-size:28px;
+}
+
+.trust div{
+  width:100%;
+}
+
+.tall{
+  height:280px;
+}
+
+.sticky-cta{
+  width:90%;
+}
+
+.sticky-cta button{
+  width:100%;
+}
+
+}
+
+
+/* Ultra Small Devices */
+@media (max-width: 360px){
+
+.hero h1{
+  font-size:28px;
+}
+
+.content-box h2{
+  font-size:24px;
+}
+
+.card-pro h2{
+  font-size:22px;
+}
+
+.hero-product{
+  max-width:190px;
+}
+
+}
 
 @media(max-width:768px){
 
