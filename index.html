@@ -483,7 +483,7 @@ section{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  /* animation: pulseGlow 4s ease-in-out infinite; */
+  animation: pulseGlow 4s ease-in-out infinite;
 }
 
 .hero-product{
@@ -512,7 +512,7 @@ section{
   left:50%;
   transform:translate(-50%,-50%);
   z-index:-1;
-  /* animation: pulseGlow 4s ease-in-out infinite; */
+  animation: pulseGlow 4s ease-in-out infinite;
 }
 
 @keyframes pulseGlow{
@@ -542,13 +542,13 @@ section{
     transparent
   );
   transform: skewX(-20deg);
-  /* animation: sweep 5s infinite; */
+  animation: sweep 5s infinite;
 }
 
-/* @keyframes sweep{
+@keyframes sweep{
   0%{ left:-120%; }
   100%{ left:37%; }
-} */
+}
 .hero{
   position: relative;
   overflow: hidden;
@@ -1014,7 +1014,7 @@ video{
 ========================================= */
 
 .about-cinematic{
-  min-height:100dvh;
+  min-height:70dvh;
   height:auto;
   padding:100px 0;
 }
@@ -1503,7 +1503,7 @@ video{
   <video autoplay muted loop playsinline class="bg-video">
       <source src="/Videos/Oil-plant.mp4" type="video/mp4">
   </video> <!-- DARK CORE LAYER -->
-  <!-- <div class="video-overlay"></div> LIGHT SCAN BEAM -->
+  <div class="video-overlay"></div> <!-- LIGHT SCAN BEAM -->
   <!-- <div class="scan-beam"></div> GRAIN NOISE -->
   <div class="container">
       <div class="content-box">
