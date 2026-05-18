@@ -687,7 +687,7 @@ section{
     height:100%;
     object-fit: cover;
     transform: translate(-50%, -50%);
-    filter: brightness(0.35) contrast(1.3) saturate(0.9);
+    filter: brightness(0.5) contrast(1.3) saturate(0.9);
     z-index: 0;
 }
 
@@ -695,7 +695,7 @@ section{
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.4), rgba(11, 15, 20, 0.95));
+    /* background: radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.4), rgba(11, 15, 20, 0.95)); */
     z-index: 1;
 }
 
@@ -1014,7 +1014,7 @@ video{
 ========================================= */
 
 .about-cinematic{
-  min-height:70dvh;
+  min-height:90dvh;
   height:auto;
   padding:100px 0;
 }
@@ -1500,9 +1500,10 @@ video{
 </section>
 
 <section class="about-cinematic"> <!-- BACK VIDEO --> 
-  <video autoplay muted loop playsinline class="bg-video">
+  <!-- <video autoplay muted loop playsinline class="bg-video">
       <source src="/Videos/Oil-plant.mp4" type="video/mp4">
-  </video> <!-- DARK CORE LAYER -->
+  </video> DARK CORE LAYER -->
+  <img src="/Img/aboutbg.png" class="bg-video" alt="">
   <div class="video-overlay"></div> <!-- LIGHT SCAN BEAM -->
   <!-- <div class="scan-beam"></div> GRAIN NOISE -->
   <div class="container">
