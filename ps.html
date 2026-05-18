@@ -912,8 +912,6 @@ section{
 
 }
 
-
-
 /* =========================================
    GLOBAL RESPONSIVE FIXES
 ========================================= */
@@ -1266,6 +1264,16 @@ video{
 
 }
 
+/* =========================================
+   FIX OVERFLOW ISSUES
+========================================= */
+
+body,
+html{
+  overflow-x:hidden;
+}
+
+
 
 /* =========================================
    BETTER TOUCH DEVICES
@@ -1304,18 +1312,23 @@ video{
 
 }
 
-
 </style>
 </head>
 
 <body>
 
 <!-- PRELOADER -->
-<!-- <div id="preloader">
-  <video id="preloader-video" autoplay muted playsinline>
-    <source src="/Videos/bio-preloder.mp4" type="video/mp4">
-  </video>
-</div> -->
+<div id="preloader">
+  <!-- <video 
+  id="preloader-video"
+  autoplay
+  muted
+  playsinline
+  webkit-playsinline
+>
+  <source src="/Videos/bio-preloder.mp4" type="video/mp4">
+</video> -->
+</div>
 
 <!-- NAV -->
 <nav class="navbar navbar-expand-lg sticky-top">
@@ -1647,10 +1660,14 @@ elements.forEach(el => observer.observe(el));
   
     function animateHero(){
   
-      heroImg.style.transform = `
-        rotateY(${mouseX}deg)
-        rotateX(${mouseY}deg)
-      `;
+      if(window.innerWidth > 768){
+
+heroImg.style.transform = `
+  rotateY(${mouseX}deg)
+  rotateX(${mouseY}deg)
+`;
+
+}
   
       requestAnimationFrame(animateHero);
   
@@ -1692,28 +1709,41 @@ const observer4 = new IntersectionObserver((entries) => {
 bentoItems.forEach(el => observer4.observe(el));
   </script> -->
 
-
-<script>
-
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  const video = document.getElementById("preloader-video");
-
-  const hide = () => {
-    if (!preloader) return;
-    preloader.classList.add("hide");
-
-    setTimeout(() => {
-      preloader.remove();
-    }, 1000);
-  };
-
-  if (video) {
-    video.addEventListener("ended", hide);
-  }
-});
-  
-  </script>
+  <script>
+    window.addEventListener("load", () => {
+    
+      const preloader = document.getElementById("preloader");
+      const video = document.getElementById("preloader-video");
+    
+      const hidePreloader = () => {
+    
+        preloader.classList.add("hide");
+    
+        setTimeout(() => {
+          preloader.remove();
+        }, 1000);
+    
+      };
+    
+      /* fallback timeout */
+      setTimeout(hidePreloader, 5000);
+    
+      if(video){
+    
+        video.play().catch(() => {
+          hidePreloader();
+        });
+    
+        video.addEventListener("ended", hidePreloader);
+    
+      } else {
+    
+        hidePreloader();
+    
+      }
+    
+    });
+    </script>
   
 
 <script>
