@@ -810,10 +810,10 @@ PRODUCT LIST
 
 .product-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
   gap:22px;
+  width:100%;
 }
-
 .product-box{
   background:
   linear-gradient(
@@ -826,6 +826,8 @@ PRODUCT LIST
 
   border-radius:20px;
 
+  width:100%;
+  min-width:0;
   padding:30px;
 
   transition:0.4s;
@@ -1379,6 +1381,26 @@ img{
 
 .card3d:hover{
   transform:none;
+}
+
+}
+
+@media(max-width:768px){
+
+.product-grid{
+  grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:576px){
+
+.product-grid{
+  grid-template-columns:1fr;
+}
+
+.product-box{
+  padding:22px;
 }
 
 }
