@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bio-Mileager | Contact Engineering Division</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+:root{
+  --bg:#070B10;
+  --panel:#0E141C;
+  --panel2:#111923;
+  --text:#E5E7EB;
+  --muted:#7C8CA0;
+  --blue:#3B82F6;
+  --green:#22C55E;
+  --line:rgba(255,255,255,0.06);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,sans-serif;
+  overflow-x:hidden;
+}
+
+/* ================= GRID BACKGROUND ================= */
+
+.tech-bg{
+  position:fixed;
+  inset:0;
+  z-index:-3;
+
+  background-image:
+  linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size:60px 60px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+  background:rgba(0,0,0,0.35);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  padding:18px 0;
+}
+
+.navbar-brand{
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.nav-link{
+  color:#A8B3C2 !important;
+  transition:0.3s;
+  position:relative;
+}
+
+.nav-link:hover{
+  color:#fff !important;
+  transform:translateY(-2px);
+}
+
+/* ================= HERO ================= */
+.hero-watermark{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:clamp(120px,20vw,320px);
+
+font-weight:900;
+
+letter-spacing:15px;
+
+white-space:nowrap;
+
+opacity:0.08;
+
+background:
+linear-gradient(
+  90deg,
+  #3B82F6,
+  #22C55E
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+
+.contact-hero{
+  position:relative;
+  min-height:78vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* cinematic glow */
+.contact-hero::before{
+  content:"";
+  position:absolute;
+  width:700px;
+  height:700px;
+  background:
+  radial-gradient(circle,
+  rgba(59,130,246,0.22),
+  transparent 70%);
+
+  top:50%;
+  right:-180px;
+  transform:translateY(-50%);
+  z-index:0;
+}
+
+/* scan beam */
+.contact-hero::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-40%;
+  width:30%;
+  height:100%;
+  background:
+  linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.06),
+    transparent
+  );
+
+  transform:skewX(-20deg);
+  animation:scan 8s linear infinite;
+}
+
+@keyframes scan{
+  0%{ left:-40%; }
+  100%{ left:140%; }
+}
+
+
+
+.hero-content{
+  position:relative;
+  z-index:3;
+}
+
+.kicker{
+  color:var(--green);
+  letter-spacing:4px;
+  font-size:12px;
+  margin-bottom:20px;
+}
+
+.hero-content h1{
+  font-size:clamp(50px,8vw,110px);
+  font-weight:900;
+  line-height:0.95;
+  text-transform:uppercase;
+}
+
+.hero-content h1 span{
+  background:linear-gradient(90deg,#3B82F6,#22C55E);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-content p{
+  max-width:650px;
+  margin-top:30px;
+  color:var(--muted);
+  line-height:1.9;
+  font-size:15px;
+}
+
+/* ================= INDUSTRIAL PANELS ================= */
+
+.section-space{
+  padding:110px 0;
+}
+
+.panel{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.01)
+  );
+
+  border:1px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  transition:0.5s ease;
+}
+
+.panel:hover{
+  transform:translateY(-6px);
+  border-color:rgba(59,130,246,0.25);
+  box-shadow:0 30px 80px rgba(0,0,0,0.45);
+}
+
+/* edge glow */
+.panel::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  padding:1px;
+
+  background:
+  linear-gradient(
+    130deg,
+    rgba(59,130,246,0.25),
+    transparent,
+    rgba(34,197,94,0.18)
+  );
+
+  -webkit-mask:
+  linear-gradient(#fff 0 0) content-box,
+  linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+
+  pointer-events:none;
+}
+
+.panel-inner{
+  padding:50px;
+}
+
+/* ================= CONTACT INFO ================= */
+
+.info-box{
+  display:flex;
+  gap:18px;
+  margin-bottom:35px;
+}
+
+.info-icon{
+  min-width:58px;
+  height:58px;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(59,130,246,0.16),
+    rgba(34,197,94,0.12)
+  );
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:22px;
+  color:#fff;
+}
+
+.info-box small{
+  color:var(--green);
+  letter-spacing:2px;
+  font-size:11px;
+}
+
+.info-box h5{
+  margin-top:6px;
+  font-weight:700;
+}
+
+.info-box p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* ================= FORM ================= */
+
+.form-title{
+  font-size:34px;
+  font-weight:800;
+  margin-bottom:35px;
+}
+
+.form-control{
+  background:#0C1219;
+  border:1px solid rgba(255,255,255,0.06);
+  color:#fff;
+  padding:16px 18px;
+  border-radius:14px;
+  margin-bottom:18px;
+}
+
+.form-control:focus{
+  background:#0C1219;
+  border-color:rgba(59,130,246,0.45);
+  box-shadow:none;
+  color:#fff;
+}
+
+textarea{
+  resize:none;
+}
+
+.btn-industrial{
+  width:100%;
+  border:none;
+
+  background:
+  linear-gradient(
+    135deg,
+    #3B82F6,
+    #22C55E
+  );
+
+  color:#fff;
+  padding:16px;
+  border-radius:14px;
+
+  font-weight:700;
+  letter-spacing:1px;
+
+  transition:0.4s ease;
+}
+
+.btn-industrial:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 40px rgba(59,130,246,0.35);
+}
+
+/* ================= LIVE TERMINAL ================= */
+
+.terminal{
+  margin-top:40px;
+  background:#05080D;
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.terminal-top{
+  padding:12px 18px;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  display:flex;
+  gap:10px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+}
+
+.red{background:#EF4444;}
+.yellow{background:#F59E0B;}
+.green{background:#22C55E;}
+
+.terminal-body{
+  padding:25px;
+  font-size:14px;
+  color:#9EE6B8;
+  line-height:2;
+  font-family:monospace;
+}
+
+/* ================= MAP ================= */
+
+.map-section{
+  margin-top:80px;
+}
+
+.map-frame{
+  overflow:hidden;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.06);
+  position:relative;
+}
+
+.map-frame iframe{
+  width:100%;
+  height:550px;
+  border:none;
+  filter:grayscale(1) contrast(1.2) brightness(0.8);
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  padding:50px 0;
+  border-top:1px solid rgba(255,255,255,0.06);
+  margin-top:120px;
+}
+
+.footer p{
+  color:var(--muted);
+  margin:0;
+}
+
+/* ================= REVEAL ================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s cubic-bezier(0.22,1,0.36,1);
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:991px){
+
+  .hero-content{
+    text-align:center;
+  }
+
+  .hero-content p{
+    margin:auto;
+    margin-top:25px;
+  }
+
+  .panel-inner{
+    padding:35px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .contact-hero{
+    min-height:auto;
+    padding:140px 0 100px;
+  }
+
+  .hero-content h1{
+    font-size:52px;
+  }
+
+  .panel-inner{
+    padding:28px;
+  }
+
+  .form-title{
+    font-size:28px;
+  }
+
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:991px){
+
+  .hero-content{
+    text-align:center;
+  }
+
+  .hero p{
+    margin:auto;
+    margin-top:30px;
+  }
+
+  .card-inner{
+    padding:40px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .hero{
+    min-height:auto;
+    padding:150px 0 100px;
+  }
+
+  .hero h1{
+    font-size:58px;
+  }
+
+  .hero-watermark{
+    font-size:100px;
+    letter-spacing:5px;
+  }
+
+  .card-inner{
+    padding:28px;
+  }
+
+  .form-title{
+    font-size:34px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="tech-bg"></div>
+
+<!-- ================= NAV ================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+  <div class="container">
+
+    <a class="navbar-brand text-white" href="#">
+      BIO-MILEAGER
+    </a>
+
+    <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#nav">
+      <i class="bi bi-list text-white fs-2"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+
+      <ul class="navbar-nav ms-auto gap-4">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/product.html">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active text-white" href="#">Contact</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="contact-hero">
+
+    <div class="hero-watermark">
+        CONNECT
+        </div>
+
+  <div class="container">
+
+    <div class="hero-content reveal">
+
+      <div class="kicker">
+        GLOBAL ENGINEERING COMMUNICATION SYSTEM
+      </div>
+
+      <h1>
+        CONTACT <br>
+        <span>ENGINEERING</span>
+      </h1>
+
+      <p>
+        Connect directly with the Bio-Mileager engineering division for industrial fuel solutions,
+        dealership infrastructure, performance partnerships, laboratory testing,
+        and enterprise-level deployment systems.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+
+<section class="section-space">
+
+  <div class="container">
+
+    <div class="row g-4 align-items-stretch">
+
+      <!-- LEFT PANEL -->
+
+      <div class="col-lg-5 reveal">
+
+        <div class="panel h-100">
+
+          <div class="panel-inner">
+
+            <div class="info-box">
+
+              <div class="info-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+
+              <div>
+                <small>LOCATION</small>
+                <h5>Nashik Engineering Hub</h5>
+                <p>
+                  Maharashtra, India
+                </p>
+              </div>
+
+            </div>
+
+            <div class="info-box">
+
+              <div class="info-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+
+              <div>
+                <small>COMMUNICATION</small>
+                <h5>Direct Contact</h5>
+                <p>
+                  +91 XXXXX XXXXX
+                </p>
+              </div>
+
+            </div>
+
+            <div class="info-box">
+
+              <div class="info-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+
+              <div>
+                <small>MAIL SERVER</small>
+                <h5>Official Email</h5>
+                <p>
+                  info@biomileager.com
+                </p>
+              </div>
+
+            </div>
+
+            <div class="info-box">
+
+              <div class="info-icon">
+                <i class="bi bi-clock"></i>
+              </div>
+
+              <div>
+                <small>ACTIVE HOURS</small>
+                <h5>Operational Timing</h5>
+                <p>
+                  Monday — Saturday <br>
+                  09:00 AM — 07:00 PM
+                </p>
+              </div>
+
+            </div>
+
+            <!-- TERMINAL -->
+
+            <div class="terminal">
+
+              <div class="terminal-top">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+              </div>
+
+              <div class="terminal-body">
+
+                > SYSTEM STATUS : ONLINE <br>
+                > FUEL LAB CHANNEL : ACTIVE <br>
+                > INDUSTRIAL SUPPORT : READY <br>
+                > RESPONSE PROTOCOL : ENABLED
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT PANEL -->
+
+      <div class="col-lg-7 reveal">
+
+        <div class="panel h-100">
+
+          <div class="panel-inner">
+
+            <div class="form-title">
+              Send Industrial Inquiry
+            </div>
+
+            <form>
+
+              <div class="row">
+
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Full Name">
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="Email Address">
+                </div>
+
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Company Name">
+                </div>
+
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Phone Number">
+                </div>
+
+                <div class="col-12">
+                  <input type="text" class="form-control" placeholder="Subject">
+                </div>
+
+                <div class="col-12">
+                  <textarea rows="7" class="form-control" placeholder="Describe your industrial requirement..."></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn-industrial">
+                    INITIATE COMMUNICATION
+                  </button>
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- MAP -->
+
+    <div class="map-section reveal">
+
+      <div class="map-frame">
+
+        <iframe
+          src="https://www.google.com/maps?q=Nashik&output=embed"
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+  <div class="container text-center">
+
+    <p>
+      © 2026 Bio-Mileager Industrial Systems.
+      Engineered Performance Infrastructure.
+    </p>
+
+  </div>
+
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+
+<script>
+
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries)=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+      entry.target.classList.add('active');
+    }
+
+  });
+
+},{ threshold:0.15 });
+
+reveals.forEach(el=>observer.observe(el));
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
