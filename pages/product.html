@@ -68,9 +68,11 @@ section{
 }
 
 .container{
-  width:min(1280px,90%);
+  width:100%;
+  max-width:1280px;
   margin:auto;
-}   
+  padding-inline:20px;
+}
 
 /* ================= NAV ================= */
 
@@ -1313,6 +1315,59 @@ section{
 .btn-primary:hover,
 .whatsapp:hover,
 .trust div:hover{
+  transform:none;
+}
+
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Prevent giant background text from overflowing */
+.hero::before{
+  max-width:100%;
+  overflow:hidden;
+}
+
+/* Prevent cards and images from pushing width */
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* Fix Bootstrap row overflow issue */
+.row{
+  margin-left:0;
+  margin-right:0;
+}
+
+/* Mobile fix */
+@media(max-width:768px){
+
+  .hero::before{
+    font-size:48px;
+    letter-spacing:2px;
+    white-space:normal;
+    text-align:center;
+    width:100%;
+    left:0;
+  }
+
+  .timeline{
+    overflow:hidden;
+  }
+
+  .card3d{
+    width:100%;
+  }
+
+}
+
+@media (hover:none){
+
+.card3d:hover{
   transform:none;
 }
 
