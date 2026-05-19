@@ -75,20 +75,32 @@ section{
 
 /* ================= NAV ================= */
 
-.navbar {
-  background: rgba(0, 0, 0, 0.35); /* semi-transparent */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Safari support */
-  transition: all 0.3s ease;
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 99999;
+
+  background: rgba(0,0,0,0.45);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+
+  transition:
+    background .3s ease,
+    padding .3s ease,
+    box-shadow .3s ease;
+
   padding: 18px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.navbar.scrolled {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+.navbar.scrolled{
+  background: rgba(0,0,0,0.75);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
   padding: 12px 0;
 }
 .nav-link{
