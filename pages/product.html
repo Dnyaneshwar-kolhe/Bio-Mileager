@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Advanced fuel efficiency enhancer improving mileage and reducing emissions.">
@@ -7,184 +8,184 @@
   <meta name="author" content="Bio-Mileager">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bio-Mileager | Product</title>
-<!-- <link rel="stylesheet" href="BIO_CSS.css"> -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <title>Bio-Mileager | Product</title>
+  <!-- <link rel="stylesheet" href="BIO_CSS.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-<style>
+  <style>
+    :root {
+      --bg: #0B0F14;
+      --panel: #111823;
+      --text: #E5E7EB;
+      --muted: #94A3B8;
+      --blue: #3B82F6;
+      --green: #22C55E;
+      --border: rgba(255, 255, 255, 0.08);
+    }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-:root{
-  --bg:#0B0F14;
-  --panel:#111823;
-  --text:#E5E7EB;
-  --muted:#94A3B8;
-  --blue:#3B82F6;
-  --green:#22C55E;
-  --border:rgba(255,255,255,0.08);
-}
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-html{
-  scroll-behavior: smooth;
-}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, sans-serif;
+      /* font-family: Epic Pro; */
+      overflow-x: hidden;
+    }
 
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter, sans-serif;
-  /* font-family: Epic Pro; */
-  overflow-x:hidden;
-}
+    .tech-bg {
+      position: fixed;
+      inset: 0;
 
-.tech-bg{
-  position:fixed;
-  inset:0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 
-  background-image:
-  linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
 
-  background-size:60px 60px;
+      mask-image:
+        radial-gradient(circle at center, black 40%, transparent 95%);
 
-  mask-image:
-  radial-gradient(circle at center, black 40%, transparent 95%);
+      z-index: -2;
+    }
 
-  z-index:-2;
-}
+    section {
+      position: relative;
+      padding: 70px 0;
+    }
 
-section{
-  position:relative;
-  padding:100px 0;
-}
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: auto;
+      padding-inline: 20px;
+    }
 
-.container{
-  width:100%;
-  max-width:1280px;
-  margin:auto;
-  padding-inline:20px;
-}  
+    /* ================= NAV ================= */
 
-/* ================= NAV ================= */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
 
-.navbar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+      z-index: 99999;
 
-  z-index: 99999;
+      background: rgba(0, 0, 0, 0.45);
 
-  background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition:
+        background .3s ease,
+        padding .3s ease,
+        box-shadow .3s ease;
 
-  transition:
-    background .3s ease,
-    padding .3s ease,
-    box-shadow .3s ease;
+      padding: 18px 0;
+    }
 
-  padding: 18px 0;
-}
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.75);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+      padding: 12px 0;
+    }
 
-.navbar.scrolled{
-  background: rgba(0,0,0,0.75);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
-  padding: 12px 0;
-}
-.nav-link{
-  color:var(--muted) !important;
-  font-weight:500;
-}
+    .nav-link {
+      color: var(--muted) !important;
+      font-weight: 500;
+    }
 
-.nav-link:hover{
-  color:#fff !important;
-}
-
-
+    .nav-link:hover {
+      color: #fff !important;
+    }
 
 
 
-/* Footer------ */
-.footer-industry{
-  background: #0B0F14;
-  padding: 60px 0 20px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-/* links */
-.footer-links li{
-  margin-bottom: 8px;
-}
-
-.footer-links a{
-  color: #94A3B8;
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-
-.footer-links a:hover{
-  color: #ffffff;
-  padding-left: 4px;
-}
-
-/* headings */
-.footer-industry h6{
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-/* smooth text feel */
-.footer-industry p{
-  font-size: 14px;
-  line-height: 1.6;
-}
 
 
-/* ================= MOBILE NAVBAR ================= */
+    /* Footer------ */
+    .footer-industry {
+      background: #0B0F14;
+      padding: 60px 0 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
 
-@media(max-width:991px){
+    /* links */
+    .footer-links li {
+      margin-bottom: 8px;
+    }
 
-.navbar-collapse{
-  background:#0B0F14;
-  padding:20px;
-  border-radius:12px;
-  margin-top:15px;
-  border:1px solid rgba(255,255,255,0.08);
-}
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
 
-.navbar-nav{
-  gap:10px !important;
-}
+    .footer-links a:hover {
+      color: #ffffff;
+      padding-left: 4px;
+    }
 
-}
+    /* headings */
+    .footer-industry h6 {
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
 
-.nav-link{
-  position:relative;
-  color:#ccc !important;
-  font-weight:500;
-  letter-spacing:0.5px;
-  transition:all 0.3s ease;
-}
+    /* smooth text feel */
+    .footer-industry p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
 
-.nav-link i{
-  margin-right:6px;
-  transition:transform 0.3s ease;
-}
 
-/* Industrial underline effect */
-/* .nav-link::after {
+    /* ================= MOBILE NAVBAR ================= */
+
+    @media(max-width:991px) {
+
+      .navbar-collapse {
+        background: #0B0F14;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .navbar-nav {
+        gap: 10px !important;
+      }
+
+    }
+
+    .nav-link {
+      position: relative;
+      color: #ccc !important;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link i {
+      margin-right: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Industrial underline effect */
+    /* .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -195,2128 +196,2102 @@ section{
   transition: width 0.3s ease;
 } */
 
-/* Hover effects */
-.nav-link:hover{
-  color:#00ffcc;
-  transform:translateY(-2px);
-}
+    /* Hover effects */
+    .nav-link:hover {
+      color: #00ffcc;
+      transform: translateY(-2px);
+    }
 
-.nav-link:hover::after {
-  width: 100%;
-}
+    .nav-link:hover::after {
+      width: 100%;
+    }
 
-/* Icon animation */
-.nav-link:hover i{
-  transform:scale(1.1);
-}
-@keyframes pulseGlow {
-  0% { text-shadow: 0 0 5px #00ffcc; }
-  50% { text-shadow: 0 0 15px #00ffcc; }
-  100% { text-shadow: 0 0 5px #00ffcc; }
-}
+    /* Icon animation */
+    .nav-link:hover i {
+      transform: scale(1.1);
+    }
 
-.nav-link:hover {
-  animation: pulseGlow 1s infinite;
-  transform: translateY(-3px) scale(1.05);
+    @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 5px #00ffcc;
+      }
 
-}
+      50% {
+        text-shadow: 0 0 15px #00ffcc;
+      }
 
+      100% {
+        text-shadow: 0 0 5px #00ffcc;
+      }
+    }
 
-.navbar-toggler {
-  border: none;
-}
+    .nav-link:hover {
+      animation: pulseGlow 1s infinite;
+      transform: translateY(-3px) scale(1.05);
 
-.navbar-toggler-icon {
-  background-image: none;
-  width: 25px;
-  height: 2px;
-  background: #00ffcc;
-  position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 2px;
-  background: #00ffcc;
-  left: 0;
-  transition: 0.3s;
-}
-
-.navbar-toggler-icon::before {
-  top: -8px;
-}
-
-.navbar-toggler-icon::after {
-  top: 8px;
-}
-.container{
-  width:100%;
-  max-width:1280px;
-  padding-left:20px;
-  padding-right:20px;
-}
+    }
 
 
-/* =======BACKGROUND GRID======= */
+    .navbar-toggler {
+      border: none;
+    }
 
-.tech-bg{
-  position:fixed;
-  inset:0;
+    .navbar-toggler-icon {
+      background-image: none;
+      width: 25px;
+      height: 2px;
+      background: #00ffcc;
+      position: relative;
+    }
 
-  background-image:
-  linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background: #00ffcc;
+      left: 0;
+      transition: 0.3s;
+    }
 
-  background-size:60px 60px;
+    .navbar-toggler-icon::before {
+      top: -8px;
+    }
 
-  mask-image:
-  radial-gradient(circle at center, black 40%, transparent 95%);
+    .navbar-toggler-icon::after {
+      top: 8px;
+    }
 
-  z-index:-2;
-}
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
+    /* =======BACKGROUND GRID======= */
+
+    .tech-bg {
+      position: fixed;
+      inset: 0;
+
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+
+      background-size: 60px 60px;
+
+      mask-image:
+        radial-gradient(circle at center, black 40%, transparent 95%);
+
+      z-index: -2;
+    }
 
 
 
-/* =========================================================
+    /* =========================================================
 HERO
 ========================================================= */
 
-.hero{
-  min-height:100vh;
+    .hero {
+      min-height: 85vh;
+      padding: 120px 0 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+      text-align: center;
 
-  text-align:center;
+      overflow: hidden;
+    }
 
-  overflow:hidden;
-}
+    .hero::before {
+      content: "BIO-MILEAGER";
 
-.hero::before{
-  content:"BIO-MILEAGER";
+      position: absolute;
 
-  position:absolute;
+      font-size: clamp(70px, 15vw, 220px);
 
-  font-size:clamp(70px,15vw,220px);
+      font-weight: 900;
 
-  font-weight:900;
+      letter-spacing: 10px;
 
-  letter-spacing:10px;
+      opacity: 0.04;
 
-  opacity:0.04;
+      white-space: nowrap;
 
-  white-space:nowrap;
+      font-family: Orbitron, sans-serif;
+    }
 
-  font-family:Orbitron,sans-serif;
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-}
+    .hero-tag {
+      color: var(--green);
 
-.hero-tag{
-  color:var(--green);
+      letter-spacing: 4px;
 
-  letter-spacing:4px;
+      font-size: 12px;
 
-  font-size:12px;
+      margin-bottom: 25px;
+    }
 
-  margin-bottom:25px;
-}
+    .hero h1 {
+      font-size: clamp(48px, 7vw, 92px);
 
-.hero h1{
-  font-size:clamp(48px,7vw,92px);
+      line-height: 1;
 
-  line-height:1;
+      font-weight: 900;
 
-  font-weight:900;
+      font-family: Orbitron, sans-serif;
+    }
 
-  font-family:Orbitron,sans-serif;
-}
+    .hero p {
+      max-width: 720px;
 
-.hero p{
-  max-width:720px;
+      margin: 25px auto 0;
 
-  margin:25px auto 0;
+      color: var(--muted);
 
-  color:var(--muted);
+      line-height: 1.9;
+    }
 
-  line-height:1.9;
-}
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
 
-.hero-buttons{
-  display:flex;
-  justify-content:center;
-  gap:20px;
+      margin-top: 45px;
 
-  margin-top:45px;
+      flex-wrap: wrap;
+    }
 
-  flex-wrap:wrap;
-}
+    .btn-main {
+      padding: 16px 34px;
 
-.btn-main{
-  padding:16px 34px;
+      border-radius: 14px;
 
-  border-radius:14px;
+      background:
+        linear-gradient(135deg,
+          var(--blue),
+          var(--green));
 
-  background:
-  linear-gradient(
-    135deg,
-    var(--blue),
-    var(--green)
-  );
+      color: white;
 
-  color:white;
+      text-decoration: none;
 
-  text-decoration:none;
+      font-weight: 700;
 
-  font-weight:700;
+      transition: 0.4s;
+    }
 
-  transition:0.4s;
-}
+    .btn-main:hover {
+      transform: translateY(-5px);
 
-.btn-main:hover{
-  transform:translateY(-5px);
+      box-shadow:
+        0 20px 40px rgba(59, 130, 246, 0.25);
+    }
 
-  box-shadow:
-  0 20px 40px rgba(59,130,246,0.25);
-}
+    .btn-outline {
+      padding: 16px 34px;
 
-.btn-outline{
-  padding:16px 34px;
+      border-radius: 14px;
 
-  border-radius:14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
 
-  border:1px solid rgba(255,255,255,0.1);
+      text-decoration: none;
 
-  text-decoration:none;
+      color: white;
 
-  color:white;
+      transition: 0.4s;
+    }
 
-  transition:0.4s;
-}
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
 
-.btn-outline:hover{
-  background:rgba(255,255,255,0.05);
-}
-
-/* =========================================================
+    /* =========================================================
 METRICS
 ========================================================= */
 
-/* =========================================================
+    /* =========================================================
 ULTRA INDUSTRIAL METRICS
 ========================================================= */
 
-.metrics{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-  perspective:1600px;
-}
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      perspective: 1600px;
+    }
 
-/* CARD */
+    /* CARD */
 
-.metric-box{
- text-align: center;
-  position:relative;
-  overflow:hidden;
+    .metric-box {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
 
-  padding:50px 40px;
-  border-radius:28px;
+      padding: 50px 40px;
+      border-radius: 28px;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,0.06),
-      rgba(255,255,255,0.015)
-    );
+      background:
+        linear-gradient(145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.015));
 
-  border:1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
 
-  backdrop-filter:blur(20px);
+      backdrop-filter: blur(20px);
 
-  transform-style:preserve-3d;
+      transform-style: preserve-3d;
 
-  /* INITIAL STATE */
+      /* INITIAL STATE */
 
-  opacity:0;
+      opacity: 0;
 
-  transform:
-    translateY(140px)
-    rotateX(24deg)
-    scale(.82);
+      transform:
+        translateY(140px) rotateX(24deg) scale(.82);
 
-  filter:
-    blur(20px);
+      filter:
+        blur(20px);
 
-  transition:
-    opacity 1.2s ease,
-    transform 1.6s cubic-bezier(.16,1,.3,1),
-    filter 1.4s ease,
-    border-color .6s ease,
-    box-shadow .8s ease;
+      transition:
+        opacity 1.2s ease,
+        transform 1.6s cubic-bezier(.16, 1, .3, 1),
+        filter 1.4s ease,
+        border-color .6s ease,
+        box-shadow .8s ease;
 
-}
+    }
 
-/* ACTIVE STATE */
+    /* ACTIVE STATE */
 
-.metric-box.show{
+    .metric-box.show {
 
-  opacity:1;
+      opacity: 1;
 
-  transform:
-    translateY(0)
-    rotateX(0deg)
-    scale(1);
+      transform:
+        translateY(0) rotateX(0deg) scale(1);
 
-  filter:blur(0);
+      filter: blur(0);
 
-  border-color:
-    rgba(59,130,246,0.25);
+      border-color:
+        rgba(59, 130, 246, 0.25);
 
-  box-shadow:
-    0 40px 80px rgba(0,0,0,0.55),
-    inset 0 1px rgba(255,255,255,0.05),
-    0 0 60px rgba(59,130,246,0.08);
+      box-shadow:
+        0 40px 80px rgba(0, 0, 0, 0.55),
+        inset 0 1px rgba(255, 255, 255, 0.05),
+        0 0 60px rgba(59, 130, 246, 0.08);
 
-}
+    }
 
-/* DYNAMIC LIGHT SWEEP */
+    /* DYNAMIC LIGHT SWEEP */
 
-.metric-box::before{
+    .metric-box::before {
 
-  content:"";
+      content: "";
 
-  position:absolute;
+      position: absolute;
 
-  top:-150%;
-  left:-40%;
+      top: -150%;
+      left: -40%;
 
-  width:80%;
-  height:400%;
+      width: 80%;
+      height: 400%;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255,255,255,0.18),
-      transparent
-    );
+      background:
+        linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.18),
+          transparent);
 
-  transform:rotate(25deg);
+      transform: rotate(25deg);
 
-  transition:1.8s ease;
+      transition: 1.8s ease;
 
-}
+    }
 
-.metric-box.show::before{
-  left:140%;
-}
+    .metric-box.show::before {
+      left: 140%;
+    }
 
-/* ENERGY GLOW */
+    /* ENERGY GLOW */
 
-.metric-box::after{
+    .metric-box::after {
 
-  content:"";
+      content: "";
 
-  position:absolute;
+      position: absolute;
 
-  width:280px;
-  height:280px;
+      width: 280px;
+      height: 280px;
 
-  border-radius:50%;
+      border-radius: 50%;
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(59,130,246,0.22),
-      transparent 70%
-    );
+      background:
+        radial-gradient(circle,
+          rgba(59, 130, 246, 0.22),
+          transparent 70%);
 
-  top:-120px;
-  right:-120px;
+      top: -120px;
+      right: -120px;
 
-  opacity:0;
+      opacity: 0;
 
-  transition:1.5s ease;
-}
+      transition: 1.5s ease;
+    }
 
-.metric-box.show::after{
-  opacity:1;
-}
+    .metric-box.show::after {
+      opacity: 1;
+    }
 
-/* NUMBER */
+    /* NUMBER */
 
-.metric-box h2{
+    .metric-box h2 {
 
-  position:relative;
+      position: relative;
 
-  font-size:72px;
-  font-weight:900;
+      font-size: 72px;
+      font-weight: 900;
 
-  color:#22C55E;
+      color: #22C55E;
 
-  letter-spacing:3px;
+      letter-spacing: 3px;
 
-  line-height:1;
+      line-height: 1;
 
-  transform:
-    translateZ(80px)
-    translateY(50px);
+      transform:
+        translateZ(80px) translateY(50px);
 
-  opacity:0;
+      opacity: 0;
 
-  transition:
-    transform 1.4s cubic-bezier(.16,1,.3,1),
-    opacity 1s ease;
+      transition:
+        transform 1.4s cubic-bezier(.16, 1, .3, 1),
+        opacity 1s ease;
 
-  transition-delay:.35s;
+      transition-delay: .35s;
 
-}
+    }
 
-/* NUMBER ACTIVE */
+    /* NUMBER ACTIVE */
 
-.metric-box.show h2{
+    .metric-box.show h2 {
 
-  opacity:1;
+      opacity: 1;
 
-  transform:
-    translateZ(80px)
-    translateY(0);
+      transform:
+        translateZ(80px) translateY(0);
 
-}
+    }
 
-/* SUBTEXT */
+    /* SUBTEXT */
 
-.metric-box p{
+    .metric-box p {
 
-  margin-top:18px;
+      margin-top: 18px;
 
-  color:#94A3B8;
+      color: #94A3B8;
 
-  font-size:15px;
+      font-size: 15px;
 
-  line-height:1.7;
+      line-height: 1.7;
 
-  transform:
-    translateY(30px);
+      transform:
+        translateY(30px);
 
-  opacity:0;
+      opacity: 0;
 
-  transition:
-    transform 1.2s ease,
-    opacity 1s ease;
+      transition:
+        transform 1.2s ease,
+        opacity 1s ease;
 
-  transition-delay:.55s;
+      transition-delay: .55s;
 
-}
+    }
 
-.metric-box.show p{
+    .metric-box.show p {
 
-  opacity:1;
-  transform:translateY(0);
+      opacity: 1;
+      transform: translateY(0);
 
-}
+    }
 
-/* INDUSTRIAL BOTTOM LINE */
+    /* INDUSTRIAL BOTTOM LINE */
 
-.metric-box .line{
+    .metric-box .line {
 
-  position:absolute;
+      position: absolute;
 
-  left:0;
-  bottom:0;
+      left: 0;
+      bottom: 0;
 
-  width:0%;
-  height:2px;
+      width: 0%;
+      height: 2px;
 
-  background:
-    linear-gradient(
-      90deg,
-      #22C55E,
-      #3B82F6
-    );
+      background:
+        linear-gradient(90deg,
+          #22C55E,
+          #3B82F6);
 
-  transition:1.6s ease;
+      transition: 1.6s ease;
 
-  transition-delay:.4s;
+      transition-delay: .4s;
 
-}
+    }
 
-.metric-box.show .line{
-  width:100%;
-}
+    .metric-box.show .line {
+      width: 100%;
+    }
 
-/* HOVER */
+    /* HOVER */
 
-.metric-box:hover{
+    .metric-box:hover {
 
-  transform:
-    translateY(-12px)
-    scale(1.02);
+      transform:
+        translateY(-12px) scale(1.02);
 
-  box-shadow:
-    0 50px 100px rgba(0,0,0,0.65),
-    0 0 80px rgba(59,130,246,0.15);
+      box-shadow:
+        0 50px 100px rgba(0, 0, 0, 0.65),
+        0 0 80px rgba(59, 130, 246, 0.15);
 
-}
+    }
 
-/* STAGGER */
+    /* STAGGER */
 
-.metric-box:nth-child(2){
-  transition-delay:.18s;
-}
+    .metric-box:nth-child(2) {
+      transition-delay: .18s;
+    }
 
-.metric-box:nth-child(3){
-  transition-delay:.36s;
-}
+    .metric-box:nth-child(3) {
+      transition-delay: .36s;
+    }
 
-/* Metrics Section Heading */
-.metrics-header{
-  text-align:center;
-  margin-bottom:50px;
-}
+    /* Metrics Section Heading */
+    .metrics-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-.metrics-header h2{
-  font-size:2.8rem;
-  color:#1E293B;
-  margin-bottom:10px;
-  font-weight:700;
-}
+    .metrics-header h2 {
+      font-size: 2.8rem;
+      color: #1E293B;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
 
-.metrics-header p{
-  font-size:1.2rem;
-  color:#64748B;
-  max-width:600px;
-  margin:0 auto;
-}
+    .metrics-header p {
+      font-size: 1.2rem;
+      color: #64748B;
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
 
-/* =========================================================
+    /* =========================================================
 FEATURE SECTION
 ========================================================= */
 
-.feature{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
+    .feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
 
-.feature-image{
-  position:relative;
-}
+    .feature-image {
+      position: relative;
+    }
 
-.feature-image::before{
-  content:"";
+    .feature-image::before {
+      content: "";
 
-  position:absolute;
+      position: absolute;
 
-  width:340px;
-  height:340px;
+      width: 340px;
+      height: 340px;
 
-  border-radius:50%;
+      border-radius: 50%;
 
-  background:
-  radial-gradient(
-    circle,
-    rgba(59,130,246,0.2),
-    transparent 70%
-  );
+      background:
+        radial-gradient(circle,
+          rgba(59, 130, 246, 0.2),
+          transparent 70%);
 
-  top:50%;
-  left:50%;
+      top: 50%;
+      left: 50%;
 
-  transform:translate(-50%,-50%);
-}
+      transform: translate(-50%, -50%);
+    }
 
-.feature-image img{
-  width:100%;
-  max-width:420px;
+    .feature-image img {
+      width: 100%;
+      max-width: 420px;
 
-  display:block;
-  margin:auto;
+      display: block;
+      margin: auto;
 
-  position:relative;
-  z-index:2;
+      position: relative;
+      z-index: 2;
 
-  filter:
-  drop-shadow(0 40px 60px rgba(0,0,0,0.6));
+      filter:
+        drop-shadow(0 40px 60px rgba(0, 0, 0, 0.6));
 
-  animation:floatProduct 6s ease-in-out infinite;
-}
+      animation: floatProduct 6s ease-in-out infinite;
+    }
 
-@keyframes floatProduct{
+    @keyframes floatProduct {
 
-  0%{
-    transform:translateY(0px);
-  }
+      0% {
+        transform: translateY(0px);
+      }
 
-  50%{
-    transform:translateY(-14px);
-  }
+      50% {
+        transform: translateY(-14px);
+      }
 
-  100%{
-    transform:translateY(0px);
-  }
+      100% {
+        transform: translateY(0px);
+      }
 
-}
+    }
 
-.feature-content h2{
-  font-size:54px;
-  line-height:1.1;
-  font-weight:900;
-}
+    .feature-content h2 {
+      font-size: 54px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
 
-.feature-content p{
-  margin-top:20px;
+    .feature-content p {
+      margin-top: 20px;
 
-  color:var(--muted);
+      color: var(--muted);
 
-  line-height:1.9;
-}
+      line-height: 1.9;
+    }
 
-.eco-tag{
-  margin-top:20px;
+    .eco-tag {
+      margin-top: 20px;
 
-  display:inline-block;
+      display: inline-block;
 
-  color:var(--green);
+      color: var(--green);
 
-  border:1px solid rgba(34,197,94,0.3);
+      border: 1px solid rgba(34, 197, 94, 0.3);
 
-  padding:10px 16px;
+      padding: 10px 16px;
 
-  border-radius:999px;
-}
+      border-radius: 999px;
+    }
 
 
-/* =========================================================
+    /* =========================================================
 PRODUCT GRID
 ========================================================= */
 
-.section-title{
-  text-align:center;
-  margin-bottom:60px;
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
 
-.section-title h2{
-  font-size:52px;
-  font-weight:900;
-}
+    .section-title h2 {
+      font-size: 52px;
+      font-weight: 900;
+    }
 
-.section-title p{
-  color:var(--muted);
-  margin-top:12px;
-}
+    .section-title p {
+      color: var(--muted);
+      margin-top: 12px;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:30px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
 
-  perspective:1400px;
-}
+      perspective: 1400px;
+    }
 
-/* =========================================================
+    /* =========================================================
 3D CARD
 ========================================================= */
 
-.card3d{
-  position:relative;
+    .card3d {
+      position: relative;
 
-  height:100%;
+      height: 100%;
 
-  border-radius:26px;
+      border-radius: 26px;
 
-  transform-style:preserve-3d;
+      transform-style: preserve-3d;
 
-  transition:
-  transform .6s cubic-bezier(.23,1,.32,1),
-  box-shadow .4s ease;
+      transition:
+        transform .6s cubic-bezier(.23, 1, .32, 1),
+        box-shadow .4s ease;
 
-  overflow:hidden;
-}
+      overflow: hidden;
+    }
 
-.card3d:hover{
-  transform:
-  rotateX(var(--rx))
-  rotateY(var(--ry))
-  translateY(-12px)
-  scale(1.02);
+    .card3d:hover {
+      transform:
+        rotateX(var(--rx)) rotateY(var(--ry)) translateY(-12px) scale(1.02);
 
-  box-shadow:
-  0 30px 60px rgba(0,0,0,0.65);
-}
+      box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.65);
+    }
 
-.card3d::before{
-  content:"";
+    .card3d::before {
+      content: "";
 
-  position:absolute;
+      position: absolute;
 
-  width:240px;
-  height:240px;
+      width: 240px;
+      height: 240px;
 
-  background:
-  radial-gradient(
-    circle,
-    rgba(59,130,246,0.22),
-    transparent 70%
-  );
+      background:
+        radial-gradient(circle,
+          rgba(59, 130, 246, 0.22),
+          transparent 70%);
 
-  top:-100px;
-  right:-100px;
+      top: -100px;
+      right: -100px;
 
-  opacity:0;
+      opacity: 0;
 
-  transition:0.4s;
-}
+      transition: 0.4s;
+    }
 
-.card3d:hover::before{
-  opacity:1;
-}
+    .card3d:hover::before {
+      opacity: 1;
+    }
 
-.card3d::after{
-  content:"";
+    .card3d::after {
+      content: "";
 
-  position:absolute;
-  inset:-1px;
+      position: absolute;
+      inset: -1px;
 
-  border-radius:26px;
+      border-radius: 26px;
 
-  background:
-  linear-gradient(
-    135deg,
-    transparent,
-    rgba(59,130,246,0.45),
-    rgba(34,197,94,0.35),
-    transparent
-  );
+      background:
+        linear-gradient(135deg,
+          transparent,
+          rgba(59, 130, 246, 0.45),
+          rgba(34, 197, 94, 0.35),
+          transparent);
 
-  opacity:0;
+      opacity: 0;
 
-  z-index:-1;
+      z-index: -1;
 
-  transition:0.4s;
-}
+      transition: 0.4s;
+    }
 
-.card3d:hover::after{
-  opacity:1;
-}
+    .card3d:hover::after {
+      opacity: 1;
+    }
 
-.card-inner{
-  background:
-  linear-gradient(
-    145deg,
-    rgba(255,255,255,0.04),
-    rgba(255,255,255,0.01)
-  );
+    .card-inner {
+      background:
+        linear-gradient(145deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.01));
 
-  border:1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
 
-  backdrop-filter:blur(16px);
+      backdrop-filter: blur(16px);
 
-  border-radius:26px;
+      border-radius: 26px;
 
-  padding:28px;
+      padding: 28px;
 
-  height:100%;
-  display:flex;
-  flex-direction:column;
-}
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
-.btn{
-  margin-top:auto;
-}
-.card-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    .btn {
+      margin-top: auto;
+    }
 
-.badge{
-  background:rgba(34,197,94,0.1);
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  color:var(--green);
+    .badge {
+      background: rgba(34, 197, 94, 0.1);
 
-  border:1px solid rgba(34,197,94,0.25);
+      color: var(--green);
 
-  padding:8px 14px;
+      border: 1px solid rgba(34, 197, 94, 0.25);
 
-  border-radius:999px;
+      padding: 8px 14px;
 
-  font-size:12px;
-}
+      border-radius: 999px;
 
-.serial{
-  color:#64748B;
-  font-size:12px;
-}
+      font-size: 12px;
+    }
 
-.card-product-img{
-  width:170px;
+    .serial {
+      color: #64748B;
+      font-size: 12px;
+    }
 
-  display:block;
+    .card-product-img {
+      width: 170px;
 
-  margin:25px auto;
+      display: block;
 
-  filter:
-  drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+      margin: 25px auto;
 
-  transition:0.5s;
-}
+      filter:
+        drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
 
-.card3d:hover .card-product-img{
-  transform:
-  translateY(-10px)
-  scale(1.05);
-}
+      transition: 0.5s;
+    }
 
-.title{
-  font-size:28px;
-  font-weight:800;
-}
+    .card3d:hover .card-product-img {
+      transform:
+        translateY(-10px) scale(1.05);
+    }
 
-.desc{
-  color:var(--muted);
+    .title {
+      font-size: 28px;
+      font-weight: 800;
+    }
 
-  margin-top:10px;
+    .desc {
+      color: var(--muted);
 
-  line-height:1.7;
+      margin-top: 10px;
 
-  font-size:15px;
-}
+      line-height: 1.7;
 
-.kpi{
-  display:flex;
-  gap:10px;
+      font-size: 15px;
+    }
 
-  flex-wrap:wrap;
+    .kpi {
+      display: flex;
+      gap: 10px;
 
-  margin-top:24px;
-}
+      flex-wrap: wrap;
 
-.kpi span{
-  padding:8px 14px;
+      margin-top: 24px;
+    }
 
-  border-radius:999px;
+    .kpi span {
+      padding: 8px 14px;
 
-  background:rgba(255,255,255,0.04);
+      border-radius: 999px;
 
-  border:1px solid rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.04);
 
-  font-size:12px;
-}
+      border: 1px solid rgba(255, 255, 255, 0.06);
 
-.btn{
-  display:inline-block;
+      font-size: 12px;
+    }
 
-  margin-top:28px;
+    .btn {
+      display: inline-block;
 
-  padding:14px 18px;
+      margin-top: 28px;
 
-  border-radius:12px;
+      padding: 14px 18px;
 
-  text-decoration:none;
+      border-radius: 12px;
 
-  background:
-  linear-gradient(
-    135deg,
-    var(--blue),
-    #60A5FA
-  );
+      text-decoration: none;
 
-  color:white;
+      background:
+        linear-gradient(135deg,
+          var(--blue),
+          #60A5FA);
 
-  font-size:14px;
-  font-weight:700;
+      color: white;
 
-  transition:0.3s;
-}
+      font-size: 14px;
+      font-weight: 700;
 
-.btn:hover{
-  transform:translateY(-4px);
+      transition: 0.3s;
+    }
 
-  box-shadow:
-  0 18px 30px rgba(59,130,246,0.25);
-}
+    .btn:hover {
+      transform: translateY(-4px);
 
+      box-shadow:
+        0 18px 30px rgba(59, 130, 246, 0.25);
+    }
 
-/* =========================================================
+
+    /* =========================================================
 PRODUCT LIST
 ========================================================= */
 
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:22px;
-}
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
 
-.product-box{
-  background:
-  linear-gradient(
-    145deg,
-    rgba(255,255,255,0.04),
-    rgba(255,255,255,0.01)
-  );
+    .product-box {
+      background:
+        linear-gradient(145deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.01));
 
-  border:1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
 
-  border-radius:20px;
+      border-radius: 20px;
 
-  padding:30px;
+      padding: 30px;
 
-  transition:0.4s;
-}
+      transition: 0.4s;
+    }
 
-.product-box:hover{
-  transform:translateY(-8px);
+    .product-box:hover {
+      transform: translateY(-8px);
 
-  border-color:rgba(59,130,246,0.35);
+      border-color: rgba(59, 130, 246, 0.35);
 
-  box-shadow:
-  0 25px 50px rgba(0,0,0,0.5);
-}
+      box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.5);
+    }
 
-.product-box h4{
-  font-size:24px;
-  font-weight:800;
-}
+    .product-box h4 {
+      font-size: 24px;
+      font-weight: 800;
+    }
 
-.product-box p{
-  color:var(--muted);
+    .product-box p {
+      color: var(--muted);
 
-  margin-top:12px;
+      margin-top: 12px;
 
-  line-height:1.7;
-}
+      line-height: 1.7;
+    }
 
 
 
-/* MOBILE */
+    /* MOBILE */
 
-@media(max-width:991px){
+    @media(max-width:991px) {
 
-.footer-grid{
-  grid-template-columns:1fr 1fr;
-}
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
 
-}
+    }
 
-@media(max-width:768px){
+    @media(max-width:768px) {
 
-.footer-grid{
-  grid-template-columns:1fr;
-  text-align:center;
-}
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
-}
+    }
 
-/* =========================================================
+    /* =========================================================
 RESPONSIVE
 ========================================================= */
 
-@media(max-width:991px){
+    @media(max-width:991px) {
 
-.feature{
-  grid-template-columns:1fr;
-  text-align:center;
-}
+      .feature {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
-.feature-content h2{
-  font-size:42px;
-}
+      .feature-content h2 {
+        font-size: 42px;
+      }
 
-.metrics{
-  grid-template-columns:1fr;
-}
+      .metrics {
+        grid-template-columns: 1fr;
+      }
 
-}
+    }
 
-@media(max-width:768px){
+    @media(max-width:768px) {
 
-.nav-links{
-  display:none;
-}
+      .nav-links {
+        display: none;
+      }
 
-.hero{
-  padding-top:120px;
-}
+      .hero {
+        padding-top: 120px;
+      }
 
-.hero h1{
-  font-size:48px;
-}
+      .hero h1 {
+        font-size: 48px;
+      }
 
-.section-title h2{
-  font-size:40px;
-}
+      .section-title h2 {
+        font-size: 40px;
+      }
 
-.feature-content h2{
-  font-size:36px;
-}
+      .feature-content h2 {
+        font-size: 36px;
+      }
 
-.metric-box h2{
-  font-size:42px;
-}
+      .metric-box h2 {
+        font-size: 42px;
+      }
 
-.card3d{
-  height:auto;
-  min-height:440px;
-}
+      .card3d {
+        height: auto;
+        min-height: 440px;
+      }
 
-}
+    }
 
 
-.timeline-section{
-padding:120px 20px;
-position:relative;
-}
+    .timeline-section {
+      padding: 120px 20px;
+      position: relative;
+    }
 
-.timeline-title{
-text-align:center;
-margin-bottom:80px;
-}
+    .timeline-title {
+      text-align: center;
+      margin-bottom: 80px;
+    }
 
-.timeline-title h1{
-font-size:60px;
-font-weight:800;
-margin-bottom:15px;
-}
+    .timeline-title h1 {
+      font-size: 60px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
 
-.timeline-title p{
-color:#94A3B8;
-max-width:700px;
-margin:auto;
-line-height:1.8;
-}
+    .timeline-title p {
+      color: #94A3B8;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+    }
 
-/* =========================================
+    /* =========================================
 TIMELINE
 ========================================= */
 
-.timeline{
-position:relative;
-max-width:1200px;
-margin:auto;
-}
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-/* CENTER LINE */
+    /* CENTER LINE */
 
-.timeline::before{
-content:"";
-position:absolute;
-left:50%;
-top:0;
-width:4px;
-height:100%;
-background:linear-gradient(
-  to bottom,
-  #3B82F6,
-  #22C55E
-);
-transform:translateX(-50%);
-border-radius:10px;
-}
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom,
+          #3B82F6,
+          #22C55E);
+      transform: translateX(-50%);
+      border-radius: 10px;
+    }
 
-/* ITEMS */
+    /* ITEMS */
 
-.timeline-item{
-position:relative;
-width:50%;
-padding:30px 50px;
-}
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 30px 50px;
+    }
 
-/* LEFT */
+    /* LEFT */
 
-.timeline-item.left{
-left:0;
-text-align:right;
-}
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
 
-/* RIGHT */
+    /* RIGHT */
 
-.timeline-item.right{
-left:50%;
-}
+    .timeline-item.right {
+      left: 50%;
+    }
 
-/* CARD */
+    /* CARD */
 
-.timeline-content{
-position:relative;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(14px);
-padding:35px;
-border-radius:24px;
-transition:0.4s ease;
-overflow:hidden;
-}
+    .timeline-content {
+      position: relative;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      padding: 35px;
+      border-radius: 24px;
+      transition: 0.4s ease;
+      overflow: hidden;
+    }
 
-.timeline-content:hover{
-transform:translateY(-10px);
-border-color:rgba(59,130,246,0.5);
-box-shadow:0 20px 50px rgba(0,0,0,0.5);
-}
+    .timeline-content:hover {
+      transform: translateY(-10px);
+      border-color: rgba(59, 130, 246, 0.5);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
 
-/* GLOW */
+    /* GLOW */
 
-.timeline-content::before{
-content:"";
-position:absolute;
-width:250px;
-height:250px;
-background:radial-gradient(
-  circle,
-  rgba(59,130,246,0.25),
-  transparent 70%
-);
-top:-120px;
-right:-120px;
-}
+    .timeline-content::before {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle,
+          rgba(59, 130, 246, 0.25),
+          transparent 70%);
+      top: -120px;
+      right: -120px;
+    }
 
-/* DOT */
+    /* DOT */
 
-.timeline-dot{
-position:absolute;
-top:50px;
-width:24px;
-height:24px;
-background:#22C55E;
-border:5px solid #0B0F14;
-border-radius:50%;
-z-index:5;
-box-shadow:0 0 20px rgba(34,197,94,0.8);
-}
+    .timeline-dot {
+      position: absolute;
+      top: 50px;
+      width: 24px;
+      height: 24px;
+      background: #22C55E;
+      border: 5px solid #0B0F14;
+      border-radius: 50%;
+      z-index: 5;
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.8);
+    }
 
-/* DOT LEFT */
+    /* DOT LEFT */
 
-.timeline-item.left .timeline-dot{
-right:-12px;
-}
+    .timeline-item.left .timeline-dot {
+      right: -12px;
+    }
 
-/* DOT RIGHT */
+    /* DOT RIGHT */
 
-.timeline-item.right .timeline-dot{
-left:-12px;
-}
+    .timeline-item.right .timeline-dot {
+      left: -12px;
+    }
 
-/* DATE */
+    /* DATE */
 
-.timeline-date{
-display:inline-block;
-padding:8px 18px;
-border-radius:999px;
-background:rgba(34,197,94,0.1);
-border:1px solid rgba(34,197,94,0.3);
-color:#22C55E;
-font-size:13px;
-font-weight:600;
-margin-bottom:20px;
-}
+    .timeline-date {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #22C55E;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
 
-/* TEXT */
+    /* TEXT */
 
-.timeline-content h2{
-font-size:30px;
-margin-bottom:15px;
-font-weight:800;
-}
+    .timeline-content h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+      font-weight: 800;
+    }
 
-.timeline-content p{
-color:#94A3B8;
-line-height:1.8;
-}
+    .timeline-content p {
+      color: #94A3B8;
+      line-height: 1.8;
+    }
 
-/* =========================================
+    /* =========================================
 RESPONSIVE
 ========================================= */
 
-@media(max-width:900px){
+    @media(max-width:900px) {
 
-.timeline::before{
-  left:20px;
-}
+      .timeline::before {
+        left: 20px;
+      }
 
-.timeline-item{
-  width:100%;
-  padding-left:70px;
-  padding-right:20px;
-  margin-bottom:40px;
-}
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 20px;
+        margin-bottom: 40px;
+      }
 
-.timeline-item.left,
-.timeline-item.right{
-  left:0;
-  text-align:left;
-}
+      .timeline-item.left,
+      .timeline-item.right {
+        left: 0;
+        text-align: left;
+      }
 
-.timeline-item.left .timeline-dot,
-.timeline-item.right .timeline-dot{
-  left:8px;
-}
+      .timeline-item.left .timeline-dot,
+      .timeline-item.right .timeline-dot {
+        left: 8px;
+      }
 
-.timeline-title h1{
-  font-size:42px;
-}
+      .timeline-title h1 {
+        font-size: 42px;
+      }
 
-}
+    }
 
-/* =========================================
+    /* =========================================
    FOOTER RESPONSIVE
 ========================================= */
 
-.footer-industry{
-  text-align:left;
-}
+    .footer-industry {
+      text-align: left;
+    }
 
-.footer-industry .row{
-  row-gap:40px;
-}
+    .footer-industry .row {
+      row-gap: 40px;
+    }
 
 
 
-/* =========================================
+    /* =========================================
    LARGE SCREENS
 ========================================= */
 
-@media(min-width:1600px){
+    @media(min-width:1600px) {
 
-  .container{
-    max-width:1450px;
-  }
-
-
-}
+      .container {
+        max-width: 1450px;
+      }
 
 
-/* =========================================
+    }
+
+
+    /* =========================================
    TABLET RESPONSIVE
 ========================================= */
 
-@media(max-width:991px){
+    @media(max-width:991px) {
 
-.navbar{
-  padding:14px 0;
-}
+      .navbar {
+        padding: 14px 0;
+      }
 
-.navbar-collapse{
-  margin-top:15px;
-}
+      .navbar-collapse {
+        margin-top: 15px;
+      }
 
-.hero{
-  text-align:center;
-}
+      .hero {
+        text-align: center;
+      }
 
-.hero .text-start{
-  text-align:center !important;
-}
+      .hero .text-start {
+        text-align: center !important;
+      }
 
-.hero-product{
-  max-width:320px;
-}
+      .hero-product {
+        max-width: 320px;
+      }
 
-.grid{
-  grid-template-columns:1fr 1fr;
-}
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
 
-.big,
-.wide{
-  grid-column:span 2;
-}
+      .big,
+      .wide {
+        grid-column: span 2;
+      }
 
-.tall{
-  grid-row:span 1;
-}
+      .tall {
+        grid-row: span 1;
+      }
 
-.content-box{
-  max-width:100%;
-}
+      .content-box {
+        max-width: 100%;
+      }
 
-}
+    }
 
-/* =========================================
+    /* =========================================
  MOBILE RESPONSIVE
 ========================================= */
 
-@media(max-width:768px){
+    @media(max-width:768px) {
 
-section{
-  padding:70px 0;
-}
+      section {
+        padding: 70px 0;
+      }
 
-.hero{
-  padding-top:120px;
-  min-height:auto;
-}
+      .hero {
+        padding-top: 120px;
+        min-height: auto;
+      }
 
-.hero h1{
-  font-size:42px;
-}
+      .hero h1 {
+        font-size: 42px;
+      }
 
-.hero p{
-  margin:auto;
-}
+      .hero p {
+        margin: auto;
+      }
 
-.hero-product{
-  max-width:260px;
-}
+      .hero-product {
+        max-width: 260px;
+      }
 
-.hero-bg-text{
-  opacity:0.06;
-  font-size:70px;
-  letter-spacing:2px;
-}
+      .hero-bg-text {
+        opacity: 0.06;
+        font-size: 70px;
+        letter-spacing: 2px;
+      }
 
-.grid{
-  grid-template-columns:1fr;
-}
+      .grid {
+        grid-template-columns: 1fr;
+      }
 
-.big,
-.wide,
-.tall{
-  grid-column:span 1;
-  grid-row:span 1;
-}
+      .big,
+      .wide,
+      .tall {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
 
-.card-pro{
-  padding:22px;
-}
+      .card-pro {
+        padding: 22px;
+      }
 
-.content-box h2{
-  font-size:38px;
-  line-height:1.15;
-}
+      .content-box h2 {
+        font-size: 38px;
+        line-height: 1.15;
+      }
 
-.content-box p{
-  font-size:14px;
-}
+      .content-box p {
+        font-size: 14px;
+      }
 
-.meta{
-  flex-direction:column;
-  gap:20px;
-}
+      .meta {
+        flex-direction: column;
+        gap: 20px;
+      }
 
-.process-step{
-  font-size:15px;
-}
+      .process-step {
+        font-size: 15px;
+      }
 
-.footer-industry{
-  text-align:center;
-}
+      .footer-industry {
+        text-align: center;
+      }
 
-.btn-primary{
-  width:100%;
-}
+      .btn-primary {
+        width: 100%;
+      }
 
-}
+    }
 
-/* =========================================
+    /* =========================================
  SMALL MOBILE DEVICES
 ========================================= */
 
-@media(max-width:480px){
+    @media(max-width:480px) {
 
-.hero{
-  padding-top:110px;
-}
+      .hero {
+        padding-top: 110px;
+      }
 
-.hero h1{
-  font-size:34px;
-}
+      .hero h1 {
+        font-size: 34px;
+      }
 
-.hero p{
-  font-size:14px;
-}
+      .hero p {
+        font-size: 14px;
+      }
 
-.content-box h2{
-  font-size:30px;
-}
+      .content-box h2 {
+        font-size: 30px;
+      }
 
-.card-pro{
-  padding:18px;
-}
+      .card-pro {
+        padding: 18px;
+      }
 
-.trust div{
-  width:100%;
-}
+      .trust div {
+        width: 100%;
+      }
 
-.navbar-brand{
-  font-size:18px;
-}
+      .navbar-brand {
+        font-size: 18px;
+      }
 
-.btn-primary{
-  padding:14px 20px;
-  font-size:15px;
-}
+      .btn-primary {
+        padding: 14px 20px;
+        font-size: 15px;
+      }
 
-}
-
-
+    }
 
 
-/* =========================================
+
+
+    /* =========================================
  BETTER TOUCH DEVICES
 ========================================= */
 
-@media (hover:none){
+    @media (hover:none) {
 
-.card-pro:hover,
-.btn-primary:hover,
-.whatsapp:hover,
-.trust div:hover{
-  transform:none;
-}
+      .card-pro:hover,
+      .btn-primary:hover,
+      .whatsapp:hover,
+      .trust div:hover {
+        transform: none;
+      }
 
-}
-
-
-html,body{
-  overflow-x: hidden;
-}
-/* Prevent giant background text from overflowing */
-.hero::before{
-  max-width:100%;
-  overflow:hidden;
-}
-
-/* Prevent cards and images from pushing width */
-img{
-  max-width:100%;
-  height:auto;
-}
-
-/* Fix Bootstrap row overflow issue */
-.row{
-  margin-left:0;
-  margin-right:0;
-}
-
-/* Mobile fix */
-@media(max-width:768px){
-
-  .hero::before{
-    font-size:48px;
-    letter-spacing:2px;
-    white-space:normal;
-    text-align:center;
-    width:100%;
-    left:0;
-  }
-
-  .timeline{
-    overflow:hidden;
-  }
-
-  .card3d{
-    width:100%;
-  }
-
-}
-
-@media (hover:none){
-
-.card3d:hover{
-  transform:none;
-}
-
-}
-
-@media(max-width:768px){
-
-.card3d{
-  min-height:auto;
-  height:auto;
-}
-
-.card-inner{
-  padding-bottom:30px;
-}
-
-}
+    }
 
 
-</style>
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Prevent giant background text from overflowing */
+    .hero::before {
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    /* Prevent cards and images from pushing width */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Fix Bootstrap row overflow issue */
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /* Mobile fix */
+    @media(max-width:768px) {
+
+      .hero::before {
+        font-size: 48px;
+        letter-spacing: 2px;
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+        left: 0;
+      }
+
+      .timeline {
+        overflow: hidden;
+      }
+
+      .card3d {
+        width: 100%;
+      }
+
+    }
+
+    @media (hover:none) {
+
+      .card3d:hover {
+        transform: none;
+      }
+
+    }
+
+    @media(max-width:768px) {
+
+      .card3d {
+        min-height: auto;
+        height: auto;
+      }
+
+      .card-inner {
+        padding-bottom: 30px;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
   <div class="tech-bg"></div>
-<!-- NAV -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand text-white fw-bold" href="#">Bio-Mileager</a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">Bio-Mileager</a>
 
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto gap-4">
-        <li class="nav-item">
-          <a class="nav-link" href="/index.html"><i class="bi bi-house-door"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-box-seam"></i> Products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-building"></i> About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pages/Contact.html"><i class="bi bi-envelope"></i> Contact Us</a>
-        </li>
-      </ul>
-    </div>
- 
-  </div>
-</nav>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<!-- ===== Hero Pro  -->
-<section class="hero">
-
-  <div class="hero-content">
-
-    <div class="hero-tag">
-      NEXT GENERATION FUEL TECHNOLOGY
-    </div>
-
-    <h1>
-      Industrial Fuel <br>
-      Efficiency Systems
-    </h1>
-
-    <p>
-      Precision engineered molecular fuel optimization systems designed
-      for cleaner combustion, higher mileage,
-      and industrial-grade engine stability.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a href="#products" class="btn-main">
-        Explore Products
-      </a>
-
-      <a href="#" class="btn-outline">
-        Technical Datasheet
-      </a>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-4">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html"><i class="bi bi-house-door"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-box-seam"></i> Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-building"></i> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/Contact.html"><i class="bi bi-envelope"></i> Contact Us</a>
+          </li>
+        </ul>
+      </div>
 
     </div>
+  </nav>
 
-  </div>
+  <!-- ===== Hero Pro  -->
+  <section class="hero">
 
-</section>
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        NEXT GENERATION FUEL TECHNOLOGY
+      </div>
+
+      <h1>
+        Industrial Fuel <br>
+        Efficiency Systems
+      </h1>
+
+      <p>
+        Precision engineered molecular fuel optimization systems designed
+        for cleaner combustion, higher mileage,
+        and industrial-grade engine stability.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#products" class="btn-main">
+          Explore Products
+        </a>
+
+        <a href="#" class="btn-outline">
+          Technical Datasheet
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
-<!-- =========================================================
+  <!-- =========================================================
 METRICS
 ========================================================= -->
 
-<section>
+  <section>
 
-  <div class="container">
+    <div class="container">
 
-    <!-- Section Heading -->
-    <div class="metrics-header">
-      <h2>Industrial Performance Metrics</h2>
-      <p>Real-time efficiency enhancement engineered for modern engines.</p>
+      <!-- Section Heading -->
+      <div class="metrics-header">
+        <h2>Industrial Performance Metrics</h2>
+        <p>Real-time efficiency enhancement engineered for modern engines.</p>
+      </div>
+
+      <!-- Metrics -->
+      <div class="metrics">
+
+        <div class="metric-box">
+          <h2 class="counter" data-target="40">0%</h2>
+          <p>Fuel Efficiency Increase</p>
+          <div class="line"></div>
+        </div>
+
+        <div class="metric-box">
+          <h2 class="counter" data-target="30">0%</h2>
+          <p>Power Optimization</p>
+          <div class="line"></div>
+        </div>
+
+        <div class="metric-box">
+          <h2 class="counter" data-target="80">0%</h2>
+          <p>Emission Reduction</p>
+          <div class="line"></div>
+        </div>
+
+      </div>
+
     </div>
-  
-    <!-- Metrics -->
-    <div class="metrics">
-  
-      <div class="metric-box">
-        <h2 class="counter" data-target="40">0%</h2>
-        <p>Fuel Efficiency Increase</p>
-        <div class="line"></div>
-      </div>
-  
-      <div class="metric-box">
-        <h2 class="counter" data-target="30">0%</h2>
-        <p>Power Optimization</p>
-        <div class="line"></div>
-      </div>
-  
-      <div class="metric-box">
-        <h2 class="counter" data-target="80">0%</h2>
-        <p>Emission Reduction</p>
-        <div class="line"></div>
-      </div>
-  
-    </div>
-  
-  </div>
 
-</section>
+  </section>
 
 
-<!-- =========================================================
+  <!-- =========================================================
 FEATURE
 ========================================================= -->
 
-<section>
+  <section>
 
-  <div class="container">
+    <div class="container">
 
-    <div class="feature">
+      <div class="feature">
 
-      <div class="feature-image">
-        <img src="/Img/BioFuelDrop.png" alt="">
-      </div>
+        <div class="feature-image">
+          <img src="/Img/BioFuelDrop.png" alt="">
+        </div>
 
-      <div class="feature-content">
+        <div class="feature-content">
 
-        <h2>
-          Precision Engineering <br>
-          Inside Every Drop
-        </h2>
+          <h2>
+            Precision Engineering <br>
+            Inside Every Drop
+          </h2>
 
-        <p>
-          Bio-Mileager reconstructs combustion behavior at a molecular level,
-          delivering cleaner fuel burn, higher efficiency,
-          and long-term engine protection for industrial
-          and commercial applications.
-        </p>
+          <p>
+            Bio-Mileager reconstructs combustion behavior at a molecular level,
+            delivering cleaner fuel burn, higher efficiency,
+            and long-term engine protection for industrial
+            and commercial applications.
+          </p>
 
-        <div class="eco-tag">
-          ECO CERTIFIED • ENGINE SAFE • LAB TESTED
+          <div class="eco-tag">
+            ECO CERTIFIED • ENGINE SAFE • LAB TESTED
+          </div>
+
         </div>
 
       </div>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
 
-<!-- =========================================================
+  <!-- =========================================================
 PRODUCTS
 ========================================================= -->
 
-<section id="products">
+  <section id="products">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+      <div class="section-title">
 
-      <h2>Industrial Product Systems</h2>
+        <h2>Industrial Product Systems</h2>
 
-      <p>
-        Advanced fuel optimization solutions engineered for modern engines.
-      </p>
+        <p>
+          Advanced fuel optimization solutions engineered for modern engines.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <!-- CARD -->
+
+        <div class="card3d">
+
+          <div class="card-inner">
+
+            <div class="card-top">
+              <div class="badge">Eco Certified</div>
+              <div class="serial">BIO-X1</div>
+            </div>
+
+            <img src="/Img/BioTemp3.png" class="card-product-img">
+
+            <div class="title">
+              Fuel Enhancer
+            </div>
+
+            <div class="desc">
+              Molecular combustion optimization system designed
+              for improved mileage and reduced emissions.
+            </div>
+
+            <div class="kpi">
+              <span>+40% Mileage</span>
+              <span>+30% Power</span>
+              <span>Engine Safe</span>
+            </div>
+
+            <a href="#fuel-products" class="btn">
+              View Product
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="card3d">
+
+          <div class="card-inner">
+
+            <div class="card-top">
+              <div class="badge">Industrial Grade</div>
+              <div class="serial">BIO-X2</div>
+            </div>
+
+            <img src="/Img/BioTemp3.png" class="card-product-img">
+
+            <div class="title">
+              Engine Cleaner
+            </div>
+
+            <div class="desc">
+              Removes carbon buildup and restores internal
+              combustion efficiency for smoother performance.
+            </div>
+
+            <div class="kpi">
+              <span>Cleaner Engine</span>
+              <span>Long Life</span>
+              <span>Stable Output</span>
+            </div>
+
+            <a href="#" class="btn">
+              View Product
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="card3d">
+
+          <div class="card-inner">
+
+            <div class="card-top">
+              <div class="badge">Performance Tech</div>
+              <div class="serial">BIO-X3</div>
+            </div>
+
+            <img src="/Img/BioTemp3.png" class="card-product-img">
+
+            <div class="title">
+              Oil Additive
+            </div>
+
+            <div class="desc">
+              Reduces mechanical friction and increases
+              engine durability under industrial workloads.
+            </div>
+
+            <div class="kpi">
+              <span>Low Friction</span>
+              <span>Thermal Stable</span>
+              <span>High Durability</span>
+            </div>
+
+            <a href="#" class="btn">
+              View Product
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="grid">
-
-      <!-- CARD -->
-
-      <div class="card3d">
-
-        <div class="card-inner">
-
-          <div class="card-top">
-            <div class="badge">Eco Certified</div>
-            <div class="serial">BIO-X1</div>
-          </div>
-
-          <img src="/Img/BioTemp3.png" class="card-product-img">
-
-          <div class="title">
-            Fuel Enhancer
-          </div>
-
-          <div class="desc">
-            Molecular combustion optimization system designed
-            for improved mileage and reduced emissions.
-          </div>
-
-          <div class="kpi">
-            <span>+40% Mileage</span>
-            <span>+30% Power</span>
-            <span>Engine Safe</span>
-          </div>
-
-          <a href="#fuel-products" class="btn">
-            View Product
-          </a>
-
-        </div>
-
-      </div>
-
-      <!-- CARD -->
-
-      <div class="card3d">
-
-        <div class="card-inner">
-
-          <div class="card-top">
-            <div class="badge">Industrial Grade</div>
-            <div class="serial">BIO-X2</div>
-          </div>
-
-          <img src="/Img/BioTemp3.png" class="card-product-img">
-
-          <div class="title">
-            Engine Cleaner
-          </div>
-
-          <div class="desc">
-            Removes carbon buildup and restores internal
-            combustion efficiency for smoother performance.
-          </div>
-
-          <div class="kpi">
-            <span>Cleaner Engine</span>
-            <span>Long Life</span>
-            <span>Stable Output</span>
-          </div>
-
-          <a href="#" class="btn">
-            View Product
-          </a>
-
-        </div>
-
-      </div>
-
-      <!-- CARD -->
-
-      <div class="card3d">
-
-        <div class="card-inner">
-
-          <div class="card-top">
-            <div class="badge">Performance Tech</div>
-            <div class="serial">BIO-X3</div>
-          </div>
-
-          <img src="/Img/BioTemp3.png" class="card-product-img">
-
-          <div class="title">
-            Oil Additive
-          </div>
-
-          <div class="desc">
-            Reduces mechanical friction and increases
-            engine durability under industrial workloads.
-          </div>
-
-          <div class="kpi">
-            <span>Low Friction</span>
-            <span>Thermal Stable</span>
-            <span>High Durability</span>
-          </div>
-
-          <a href="#" class="btn">
-            View Product
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================================================
+  <!-- =========================================================
 PRODUCT LIST
 ========================================================= -->
 
-<section id="fuel-products">
+  <section id="fuel-products">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+      <div class="section-title">
 
-      <h2>Fuel Enhancer Series</h2>
+        <h2>Fuel Enhancer Series</h2>
 
-      <p>
-        Specialized fuel enhancement systems for multiple engine categories.
-      </p>
+        <p>
+          Specialized fuel enhancement systems for multiple engine categories.
+        </p>
+
+      </div>
+
+      <div class="product-grid">
+
+        <div class="product-box">
+          <h4>X1 System</h4>
+          <p>
+            Entry-level fuel optimization solution
+            for compact engines.
+          </p>
+        </div>
+
+        <div class="product-box">
+          <h4>X2 System</h4>
+          <p>
+            Daily efficiency booster for regular
+            commercial vehicles.
+          </p>
+        </div>
+
+        <div class="product-box">
+          <h4>X3 System</h4>
+          <p>
+            High-performance combustion enhancement
+            for advanced engines.
+          </p>
+        </div>
+
+        <div class="product-box">
+          <h4>X4 Industrial</h4>
+          <p>
+            Heavy-duty industrial-grade fuel treatment
+            system.
+          </p>
+        </div>
+
+        <div class="product-box">
+          <h4>X5 Max</h4>
+          <p>
+            Maximum power optimization and emission
+            reduction technology.
+          </p>
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="product-grid">
+  </section>
 
-      <div class="product-box">
-        <h4>X1 System</h4>
-        <p>
-          Entry-level fuel optimization solution
-          for compact engines.
-        </p>
-      </div>
-
-      <div class="product-box">
-        <h4>X2 System</h4>
-        <p>
-          Daily efficiency booster for regular
-          commercial vehicles.
-        </p>
-      </div>
-
-      <div class="product-box">
-        <h4>X3 System</h4>
-        <p>
-          High-performance combustion enhancement
-          for advanced engines.
-        </p>
-      </div>
-
-      <div class="product-box">
-        <h4>X4 Industrial</h4>
-        <p>
-          Heavy-duty industrial-grade fuel treatment
-          system.
-        </p>
-      </div>
-
-      <div class="product-box">
-        <h4>X5 Max</h4>
-        <p>
-          Maximum power optimization and emission
-          reduction technology.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================================================
+  <!-- =========================================================
 TimeLine
 ========================================================= -->
 
-<section class="timeline-section">
+  <section class="timeline-section">
 
-  <div class="timeline-title">
-    <h1>Company Journey</h1>
-    <p>
-      Our industrial innovation timeline showcasing major milestones,
-      technology breakthroughs, and global expansion.
-    </p>
-  </div>
+    <div class="timeline-title">
+      <h1>Company Journey</h1>
+      <p>
+        Our industrial innovation timeline showcasing major milestones,
+        technology breakthroughs, and global expansion.
+      </p>
+    </div>
 
-  <div class="timeline">
+    <div class="timeline">
 
-    <!-- ITEM -->
+      <!-- ITEM -->
 
-    <div class="timeline-item left">
+      <div class="timeline-item left">
 
-      <div class="timeline-dot"></div>
+        <div class="timeline-dot"></div>
 
-      <div class="timeline-content">
+        <div class="timeline-content">
 
-        <div class="timeline-date">
-          2021
+          <div class="timeline-date">
+            2021
+          </div>
+
+          <h2>Research Started</h2>
+
+          <p>
+            Initial molecular fuel optimization research began with
+            advanced industrial combustion testing systems.
+          </p>
+
         </div>
 
-        <h2>Research Started</h2>
-
-        <p>
-          Initial molecular fuel optimization research began with
-          advanced industrial combustion testing systems.
-        </p>
-
       </div>
 
-    </div>
+      <!-- ITEM -->
 
-    <!-- ITEM -->
+      <div class="timeline-item right">
 
-    <div class="timeline-item right">
+        <div class="timeline-dot"></div>
 
-      <div class="timeline-dot"></div>
+        <div class="timeline-content">
 
-      <div class="timeline-content">
+          <div class="timeline-date">
+            2022
+          </div>
 
-        <div class="timeline-date">
-          2022
+          <h2>Prototype Development</h2>
+
+          <p>
+            Successfully engineered first-generation fuel enhancement
+            systems with efficiency optimization technology.
+          </p>
+
         </div>
 
-        <h2>Prototype Development</h2>
-
-        <p>
-          Successfully engineered first-generation fuel enhancement
-          systems with efficiency optimization technology.
-        </p>
-
       </div>
 
-    </div>
+      <!-- ITEM -->
 
-    <!-- ITEM -->
+      <div class="timeline-item left">
 
-    <div class="timeline-item left">
+        <div class="timeline-dot"></div>
 
-      <div class="timeline-dot"></div>
+        <div class="timeline-content">
 
-      <div class="timeline-content">
+          <div class="timeline-date">
+            2023
+          </div>
 
-        <div class="timeline-date">
-          2023
+          <h2>Industrial Testing</h2>
+
+          <p>
+            Large-scale engine performance testing completed across
+            commercial and industrial vehicle categories.
+          </p>
+
         </div>
 
-        <h2>Industrial Testing</h2>
-
-        <p>
-          Large-scale engine performance testing completed across
-          commercial and industrial vehicle categories.
-        </p>
-
       </div>
 
-    </div>
+      <!-- ITEM -->
 
-    <!-- ITEM -->
+      <div class="timeline-item right">
 
-    <div class="timeline-item right">
+        <div class="timeline-dot"></div>
 
-      <div class="timeline-dot"></div>
+        <div class="timeline-content">
 
-      <div class="timeline-content">
+          <div class="timeline-date">
+            2024
+          </div>
 
-        <div class="timeline-date">
-          2024
+          <h2>Market Expansion</h2>
+
+          <p>
+            Expanded operations with advanced fuel efficiency products
+            and next-generation engine optimization systems.
+          </p>
+
         </div>
 
-        <h2>Market Expansion</h2>
-
-        <p>
-          Expanded operations with advanced fuel efficiency products
-          and next-generation engine optimization systems.
-        </p>
-
       </div>
 
-    </div>
+      <!-- ITEM -->
 
-    <!-- ITEM -->
+      <div class="timeline-item left">
 
-    <div class="timeline-item left">
+        <div class="timeline-dot"></div>
 
-      <div class="timeline-dot"></div>
+        <div class="timeline-content">
 
-      <div class="timeline-content">
+          <div class="timeline-date">
+            2025
+          </div>
 
-        <div class="timeline-date">
-          2025
+          <h2>Global Innovation</h2>
+
+          <p>
+            Introducing AI-powered industrial fuel analytics and
+            sustainable combustion engineering solutions.
+          </p>
+
         </div>
 
-        <h2>Global Innovation</h2>
-
-        <p>
-          Introducing AI-powered industrial fuel analytics and
-          sustainable combustion engineering solutions.
-        </p>
-
       </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
+  <!-- ====== Footer ======= -->
 
-<!-- ====== Footer ======= -->
+  <footer class="footer-industry">
 
-<footer class="footer-industry">
+    <div class="container">
+      <div class="row g-4">
 
-  <div class="container">
-    <div class="row g-4">
+        <!-- Brand -->
+        <div class="col-md-4">
+          <h4 class="fw-bold text-white">Bio-Mileager</h4>
+          <p class="">
+            Advanced fuel efficiency technology designed to improve mileage, reduce emissions,
+            and enhance engine performance.
+          </p>
+        </div>
 
-      <!-- Brand -->
-      <div class="col-md-4">
-        <h4 class="fw-bold text-white">Bio-Mileager</h4>
-        <p class="">
-          Advanced fuel efficiency technology designed to improve mileage, reduce emissions,
-          and enhance engine performance.
-        </p>
+        <!-- Links -->
+        <div class="col-md-2">
+          <h6 class="text-white">Company</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/product.html">Products</a></li>
+            <li><a href="/pages/Faq.html">FAQ</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="/pages/Contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Products -->
+        <div class="col-md-3">
+          <h6 class="text-white">Products</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Fuel Enhancer</a></li>
+            <li><a href="#">Engine Cleaner</a></li>
+            <li><a href="#">Industrial Oil Additive</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3">
+          <h6 class="text">Contact</h6>
+          <!-- <p class="text mb-1">📞 +91 XXXXX XXXXX</p> -->
+          <!-- <p class="text mb-1">✉ info@biomileager.com</p> -->
+          <p class="text">📍 Nashik</p>
+        </div>
+
       </div>
 
-      <!-- Links -->
-      <div class="col-md-2">
-        <h6 class="text-white">Company</h6>
-        <ul class="list-unstyled footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
+      <hr class="mt-4" style="border-color: rgba(255,255,255,0.08);">
 
-      <!-- Products -->
-      <div class="col-md-3">
-        <h6 class="text-white">Products</h6>
-        <ul class="list-unstyled footer-links">
-          <li><a href="#">Fuel Enhancer</a></li>
-          <li><a href="#">Engine Cleaner</a></li>
-          <li><a href="#">Industrial Oil Additive</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div class="col-md-3">
-        <h6 class="text">Contact</h6>
-        <!-- <p class="text mb-1">📞 +91 XXXXX XXXXX</p> -->
-        <!-- <p class="text mb-1">✉ info@biomileager.com</p> -->
-        <p class="text">📍 Nashik</p>
+      <div class="text-center  small py-3">
+        © 2026 Bio-Mileager. All Rights Reserved. Design & Developed by Dnyaneshwar Kolhe
       </div>
 
     </div>
 
-    <hr class="mt-4" style="border-color: rgba(255,255,255,0.08);">
-
-    <div class="text-center  small py-3">
-      © 2026 Bio-Mileager. All Rights Reserved. Design & Developed by Dnyaneshwar Kolhe
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 
-<!-- =========================================================
+  <!-- =========================================================
 3D CARD JS
 ========================================================= -->
 
-<script>
+  <script>
 
-  document.querySelectorAll('.card3d').forEach(card => {
-  
-    card.addEventListener('mousemove', (e) => {
-  
-      const rect = card.getBoundingClientRect();
-  
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-  
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-  
-      const rotateY = ((x - centerX) / centerX) * 10;
-      const rotateX = ((centerY - y) / centerY) * 10;
-  
-      card.style.setProperty('--rx', rotateX + 'deg');
-      card.style.setProperty('--ry', rotateY + 'deg');
-  
+    document.querySelectorAll('.card3d').forEach(card => {
+
+      card.addEventListener('mousemove', (e) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateY = ((x - centerX) / centerX) * 10;
+        const rotateX = ((centerY - y) / centerY) * 10;
+
+        card.style.setProperty('--rx', rotateX + 'deg');
+        card.style.setProperty('--ry', rotateY + 'deg');
+
+      });
+
+      card.addEventListener('mouseleave', () => {
+
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+
+      });
+
     });
-  
-    card.addEventListener('mouseleave', () => {
-  
-      card.style.setProperty('--rx', '0deg');
-      card.style.setProperty('--ry', '0deg');
-  
-    });
-  
-  });
-  
+
   </script>
-  
+
   <script>
 
     /* =========================================================
     CINEMATIC INDUSTRIAL METRICS
     ========================================================= */
-    
+
     const metricCards = document.querySelectorAll('.metric-box');
     const counters = document.querySelectorAll('.counter');
-    
+
     let metricsPlayed = false;
-    
-    const metricsObserver = new IntersectionObserver((entries)=>{
-    
-      entries.forEach(entry=>{
-    
-        if(entry.isIntersecting){
-    
+
+    const metricsObserver = new IntersectionObserver((entries) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
           entry.target.classList.add('show');
-    
-          if(!metricsPlayed){
-    
-            counters.forEach(counter=>{
-    
+
+          if (!metricsPlayed) {
+
+            counters.forEach(counter => {
+
               const target = +counter.dataset.target;
-    
+
               let current = 0;
-    
+
               const duration = 2200;
-    
+
               const start = performance.now();
-    
-              const animate = (time)=>{
-    
+
+              const animate = (time) => {
+
                 const progress = Math.min((time - start) / duration, 1);
-    
+
                 /* EASE OUT EXPO */
-    
+
                 const eased =
                   progress === 1
-                  ? 1
-                  : 1 - Math.pow(2, -10 * progress);
-    
+                    ? 1
+                    : 1 - Math.pow(2, -10 * progress);
+
                 current = Math.floor(eased * target);
-    
+
                 counter.innerText = current + "%";
-    
-                if(progress < 1){
+
+                if (progress < 1) {
                   requestAnimationFrame(animate);
                 }
-    
+
               };
-    
+
               requestAnimationFrame(animate);
-    
+
             });
-    
+
             metricsPlayed = true;
           }
-    
+
         }
-    
+
       });
-    
-    },{
-      threshold:0.3
+
+    }, {
+      threshold: 0.3
     });
-    
-    metricCards.forEach(card=>{
+
+    metricCards.forEach(card => {
       metricsObserver.observe(card);
     });
-    
-    </script>
-  
+
+  </script>
+
   <script>
-  
+
     window.addEventListener("scroll", () => {
-    
+
       const navbar = document.querySelector(".navbar");
-    
-      if(window.scrollY > 50){
+
+      if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
-      }else{
+      } else {
         navbar.classList.remove("scrolled");
       }
-    
-    });
-    
-    </script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
 
+    });
+
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script></body>
+
+</html>

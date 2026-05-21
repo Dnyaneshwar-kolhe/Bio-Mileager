@@ -1,256 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Advanced fuel efficiency enhancer improving mileage and reducing emissions.">
-  <meta name="keywords" content="fuel saver, mileage booster, fuel additive, eco fuel technology">
-  <meta name="author" content="Bio-Mileager">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Advanced fuel efficiency enhancer improving mileage and reducing emissions.">
+    <meta name="keywords" content="fuel saver, mileage booster, fuel additive, eco fuel technology">
+    <meta name="author" content="Bio-Mileager">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bio-Mileager | Product</title>
-<!-- <link rel="stylesheet" href="BIO_CSS.css"> -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Bio-Mileager | Product</title>
+    <!-- <link rel="stylesheet" href="BIO_CSS.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-<style>
+    <style>
+        :root {
 
-:root {
+            --bg: #06090F;
+            --panel: #0B1118;
+            --panel2: #0E1621;
 
---bg: #06090F;
---panel: #0B1118;
---panel2: #0E1621;
+            --line: rgba(255, 255, 255, 0.06);
 
---line: rgba(255, 255, 255, 0.06);
+            --text: #F2F5FA;
+            --muted: #7D8EA5;
 
---text: #F2F5FA;
---muted: #7D8EA5;
+            --blue: #3B82F6;
+            --cyan: #06B6D4;
+            --green: #22C55E;
 
---blue: #3B82F6;
---cyan: #06B6D4;
---green: #22C55E;
+        }
 
-}
-
-/* =========================================================
+        /* =========================================================
 BASE
 ========================================================= */
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-html {
-scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body {
+        body {
 
-background: var(--bg);
+            background: var(--bg);
 
-color: var(--text);
+            color: var(--text);
 
-font-family: Inter, sans-serif;
+            font-family: Inter, sans-serif;
 
-overflow-x: hidden;
+            overflow-x: hidden;
 
-overscroll-behavior: none;
+            overscroll-behavior: none;
 
-}
+        }
 
-/* =========================================================
+        /* =========================================================
 BACKGROUND
 ========================================================= */
 
-.grid-bg {
+        .grid-bg {
 
-position: fixed;
-inset: 0;
+            position: fixed;
+            inset: 0;
 
-z-index: -10;
+            z-index: -10;
 
-background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 
-background-size: 55px 55px;
+            background-size: 55px 55px;
 
-}
+        }
 
-/* cinematic ambient */
+        /* cinematic ambient */
 
-.ambient {
+        .ambient {
 
-position: fixed;
-inset: 0;
+            position: fixed;
+            inset: 0;
 
-overflow: hidden;
+            overflow: hidden;
 
-z-index: -9;
+            z-index: -9;
 
-pointer-events: none;
+            pointer-events: none;
 
-}
+        }
 
-.glow {
+        .glow {
 
-position: absolute;
+            position: absolute;
 
-width: 850px;
-height: 850px;
+            width: 850px;
+            height: 850px;
 
-border-radius: 50%;
+            border-radius: 50%;
 
-filter: blur(90px);
+            filter: blur(90px);
 
-opacity: 0.16;
+            opacity: 0.16;
 
-}
+        }
 
-.glow1 {
+        .glow1 {
 
-background: #2563EB;
+            background: #2563EB;
 
-top: -200px;
-right: -250px;
+            top: -200px;
+            right: -250px;
 
-}
+        }
 
-.glow2 {
+        .glow2 {
 
-background: #06B6D4;
+            background: #06B6D4;
 
-bottom: -350px;
-left: -250px;
+            bottom: -350px;
+            left: -250px;
 
-}
-
-
-
-section{
-  position:relative;
-  padding:100px 0;
-}
-
-.container{
-  width:100%;
-  max-width:1280px;
-  margin:auto;
-  padding-inline:20px;
-}  
-
-/* ================= NAV ================= */
-
-.navbar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-
-  z-index: 99999;
-
-  background: rgba(0,0,0,0.45);
-
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-
-  transition:
-    background .3s ease,
-    padding .3s ease,
-    box-shadow .3s ease;
-
-  padding: 18px 0;
-}
-
-.navbar.scrolled{
-  background: rgba(0,0,0,0.75);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
-  padding: 12px 0;
-}
-.nav-link{
-  color:var(--muted) !important;
-  font-weight:500;
-}
-
-.nav-link:hover{
-  color:#fff !important;
-}
-
-/* Footer------ */
-.footer-industry{
-  background: #0B0F14;
-  padding: 60px 0 20px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-/* links */
-.footer-links li{
-  margin-bottom: 8px;
-}
-
-.footer-links a{
-  color: #94A3B8;
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-
-.footer-links a:hover{
-  color: #ffffff;
-  padding-left: 4px;
-}
-
-/* headings */
-.footer-industry h6{
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-/* smooth text feel */
-.footer-industry p{
-  font-size: 14px;
-  line-height: 1.6;
-}
+        }
 
 
-/* ================= MOBILE NAVBAR ================= */
 
-@media(max-width:991px){
+        section {
+            position: relative;
+            padding: 100px 0;
+        }
 
-.navbar-collapse{
-  background:#0B0F14;
-  padding:20px;
-  border-radius:12px;
-  margin-top:15px;
-  border:1px solid rgba(255,255,255,0.08);
-}
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: auto;
+            padding-inline: 20px;
+        }
 
-.navbar-nav{
-  gap:10px !important;
-}
+        /* ================= NAV ================= */
 
-}
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
 
-.nav-link{
-  position:relative;
-  color:#ccc !important;
-  font-weight:500;
-  letter-spacing:0.5px;
-  transition:all 0.3s ease;
-}
+            z-index: 99999;
 
-.nav-link i{
-  margin-right:6px;
-  transition:transform 0.3s ease;
-}
+            background: rgba(0, 0, 0, 0.45);
 
-/* Industrial underline effect */
-/* .nav-link::after {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+            transition:
+                background .3s ease,
+                padding .3s ease,
+                box-shadow .3s ease;
+
+            padding: 18px 0;
+        }
+
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            padding: 12px 0;
+        }
+
+        .nav-link {
+            color: var(--muted) !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #fff !important;
+        }
+
+        /* Footer------ */
+        .footer-industry {
+            background: #0B0F14;
+            padding: 60px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* links */
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #94A3B8;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            padding-left: 4px;
+        }
+
+        /* headings */
+        .footer-industry h6 {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* smooth text feel */
+        .footer-industry p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        /* ================= MOBILE NAVBAR ================= */
+
+        @media(max-width:991px) {
+
+            .navbar-collapse {
+                background: #0B0F14;
+                padding: 20px;
+                border-radius: 12px;
+                margin-top: 15px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .navbar-nav {
+                gap: 10px !important;
+            }
+
+        }
+
+        .nav-link {
+            position: relative;
+            color: #ccc !important;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link i {
+            margin-right: 6px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Industrial underline effect */
+        /* .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -261,203 +262,212 @@ section{
   transition: width 0.3s ease;
 } */
 
-/* Hover effects */
-.nav-link:hover{
-  color:#00ffcc;
-  transform:translateY(-2px);
-}
+        /* Hover effects */
+        .nav-link:hover {
+            color: #00ffcc;
+            transform: translateY(-2px);
+        }
 
-.nav-link:hover::after {
-  width: 100%;
-}
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
-/* Icon animation */
-.nav-link:hover i{
-  transform:scale(1.1);
-}
-@keyframes pulseGlow {
-  0% { text-shadow: 0 0 5px #00ffcc; }
-  50% { text-shadow: 0 0 15px #00ffcc; }
-  100% { text-shadow: 0 0 5px #00ffcc; }
-}
+        /* Icon animation */
+        .nav-link:hover i {
+            transform: scale(1.1);
+        }
 
-.nav-link:hover {
-  animation: pulseGlow 1s infinite;
-  transform: translateY(-3px) scale(1.05);
+        @keyframes pulseGlow {
+            0% {
+                text-shadow: 0 0 5px #00ffcc;
+            }
 
-}
+            50% {
+                text-shadow: 0 0 15px #00ffcc;
+            }
 
+            100% {
+                text-shadow: 0 0 5px #00ffcc;
+            }
+        }
 
-.navbar-toggler {
-  border: none;
-}
+        .nav-link:hover {
+            animation: pulseGlow 1s infinite;
+            transform: translateY(-3px) scale(1.05);
 
-.navbar-toggler-icon {
-  background-image: none;
-  width: 25px;
-  height: 2px;
-  background: #00ffcc;
-  position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 2px;
-  background: #00ffcc;
-  left: 0;
-  transition: 0.3s;
-}
-
-.navbar-toggler-icon::before {
-  top: -8px;
-}
-
-.navbar-toggler-icon::after {
-  top: 8px;
-}
-.container{
-  width:100%;
-  max-width:1280px;
-  padding-left:20px;
-  padding-right:20px;
-}
+        }
 
 
-/* =======BACKGROUND GRID======= */
+        .navbar-toggler {
+            border: none;
+        }
 
-.tech-bg{
-  position:fixed;
-  inset:0;
+        .navbar-toggler-icon {
+            background-image: none;
+            width: 25px;
+            height: 2px;
+            background: #00ffcc;
+            position: relative;
+        }
 
-  background-image:
-  linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background: #00ffcc;
+            left: 0;
+            transition: 0.3s;
+        }
 
-  background-size:60px 60px;
+        .navbar-toggler-icon::before {
+            top: -8px;
+        }
 
-  mask-image:
-  radial-gradient(circle at center, black 40%, transparent 95%);
+        .navbar-toggler-icon::after {
+            top: 8px;
+        }
 
-  z-index:-2;
-}
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+
+        /* =======BACKGROUND GRID======= */
+
+        .tech-bg {
+            position: fixed;
+            inset: 0;
+
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+
+            background-size: 60px 60px;
+
+            mask-image:
+                radial-gradient(circle at center, black 40%, transparent 95%);
+
+            z-index: -2;
+        }
 
 
 
-/* =========================================================
+        /* =========================================================
 HERO
 ========================================================= */
 
-.hero {
+        .hero {
 
-min-height: 100vh;
+            min-height: 85vh;
 
-position: relative;
+            position: relative;
 
-overflow: hidden;
+            overflow: hidden;
 
-display: flex;
-align-items: center;
+            display: flex;
+            align-items: center;
 
-}
+        }
 
-/* massive watermark */
+        /* massive watermark */
 
-.hero-watermark {
+        .hero-watermark {
 
-position: absolute;
+            position: absolute;
 
-top: 50%;
-left: 50%;
+            top: 50%;
+            left: 50%;
 
-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
-font-size: clamp(130px, 20vw, 340px);
+            font-size: clamp(130px, 20vw, 340px);
 
-font-weight: 900;
+            font-weight: 900;
 
-letter-spacing: 18px;
+            letter-spacing: 18px;
 
-opacity: 0.04;
+            opacity: 0.04;
 
-white-space: nowrap;
+            white-space: nowrap;
 
-user-select: none;
+            user-select: none;
 
-color: #fff;
+            color: #fff;
 
-}
+        }
 
-.hero-content {
+        .hero-content {
 
-position: relative;
+            position: relative;
 
-z-index: 5;
+            z-index: 5;
 
-}
+        }
 
-.kicker {
+        .kicker {
 
-color: #22C55E;
+            color: #22C55E;
 
-letter-spacing: 5px;
+            letter-spacing: 5px;
 
-font-size: 12px;
+            font-size: 12px;
 
-margin-bottom: 25px;
+            margin-bottom: 25px;
 
-}
+        }
 
-.hero h1 {
+        .hero h1 {
 
-font-size: clamp(70px, 9vw, 160px);
+            font-size: clamp(70px, 9vw, 160px);
 
-line-height: 0.9;
+            line-height: 0.9;
 
-font-weight: 900;
+            font-weight: 900;
 
-text-transform: uppercase;
+            text-transform: uppercase;
 
-}
+        }
 
-.hero h1 span {
+        .hero h1 span {
 
-background:
-    linear-gradient(90deg,
-        #3B82F6,
-        #06B6D4,
-        #22C55E);
+            background:
+                linear-gradient(90deg,
+                    #3B82F6,
+                    #06B6D4,
+                    #22C55E);
 
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
 
-}
+        }
 
-.hero p {
+        .hero p {
 
-max-width: 760px;
+            max-width: 760px;
 
-margin-top: 35px;
+            margin-top: 35px;
 
-color: var(--muted);
+            color: var(--muted);
 
-line-height: 2;
+            line-height: 2;
 
-font-size: 15px;
+            font-size: 15px;
 
-}
+        }
 
 
         /* =========================================================
 SECTION
 ========================================================= */
 
-        .section-space {
-            padding: 130px 0;
-        }
-
+.section-space {
+    padding: 40px 0 100px;
+}
         /* =========================================================
 PREMIUM GLASS CARD
 ========================================================= */
@@ -659,7 +669,7 @@ FORM
 
         .form-control:focus {
 
-            background: #0F1720;
+            /* background: #0F1720; */
 
             border-color: rgba(59, 130, 246, 0.5);
 
@@ -827,493 +837,499 @@ TERMINAL
 
 
 
- 
+
         /* =========================================================
 MAP
 ========================================================= */
 
-.map-wrap {
+        .map-wrap {
 
-margin-top: 100px;
+            margin-top: 100px;
 
-overflow: hidden;
+            overflow: hidden;
 
-border-radius: 34px;
+            border-radius: 34px;
 
-border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.06);
 
-}
+        }
 
-.map-wrap iframe {
+        .map-wrap iframe {
 
-width: 100%;
-height: 700px;
+            width: 100%;
+            height: 700px;
 
-border: none;
+            border: none;
 
-filter:
-    grayscale(1) brightness(0.82) contrast(1.15);
+            filter:
+                grayscale(1) brightness(0.82) contrast(1.15);
 
-}       
-/* =========================================
+        }
+
+        /* =========================================
    FOOTER RESPONSIVE
 ========================================= */
 
-.footer-industry{
-  text-align:left;
-}
+        .footer-industry {
+            text-align: left;
+        }
 
-.footer-industry .row{
-  row-gap:40px;
-}
+        .footer-industry .row {
+            row-gap: 40px;
+        }
 
 
 
-/* =========================================
+        /* =========================================
    LARGE SCREENS
 ========================================= */
 
-@media(min-width:1600px){
+        @media(min-width:1600px) {
 
-  .container{
-    max-width:1450px;
-  }
-
-
-}
+            .container {
+                max-width: 1450px;
+            }
 
 
-/* =========================================
+        }
+
+
+        /* =========================================
    TABLET RESPONSIVE
 ========================================= */
 
-@media(max-width:991px){
+        @media(max-width:991px) {
 
-.navbar{
-  padding:14px 0;
-}
+            .navbar {
+                padding: 14px 0;
+            }
 
-.navbar-collapse{
-  margin-top:15px;
-}
+            .navbar-collapse {
+                margin-top: 15px;
+            }
 
-.hero{
-  text-align:center;
-}
+            .hero {
+                text-align: center;
+            }
 
-.hero .text-start{
-  text-align:center !important;
-}
+            .hero .text-start {
+                text-align: center !important;
+            }
 
-}
+        }
 
-/* =========================================
+        /* =========================================
  MOBILE RESPONSIVE
 ========================================= */
 
-@media(max-width:768px){
+        @media(max-width:768px) {
 
-section{
-  padding:70px 0;
-}
+            section {
+                padding: 70px 0;
+            }
 
-.hero{
-  padding-top:120px;
-  min-height:auto;
-}
+            .hero {
+                padding-top: 120px;
+                min-height: auto;
+            }
 
-.hero h1{
-  font-size:42px;
-}
+            .hero h1 {
+                font-size: 42px;
+            }
 
-.hero p{
-  margin:auto;
-}
+            .hero p {
+                margin: auto;
+            }
 
-.hero-bg-text{
-  opacity:0.06;
-  font-size:70px;
-  letter-spacing:2px;
-}
+            .hero-bg-text {
+                opacity: 0.06;
+                font-size: 70px;
+                letter-spacing: 2px;
+            }
 
-.grid{
-  grid-template-columns:1fr;
-}
+            .grid {
+                grid-template-columns: 1fr;
+            }
 
-.big,
-.wide,
-.tall{
-  grid-column:span 1;
-  grid-row:span 1;
-}
-
-
-
-.content-box h2{
-  font-size:38px;
-  line-height:1.15;
-}
-
-.content-box p{
-  font-size:14px;
-}
-
-.footer-industry{
-  text-align:center;
-}
+            .big,
+            .wide,
+            .tall {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
 
 
 
-}
+            .content-box h2 {
+                font-size: 38px;
+                line-height: 1.15;
+            }
 
-/* =========================================
+            .content-box p {
+                font-size: 14px;
+            }
+
+            .footer-industry {
+                text-align: center;
+            }
+
+
+
+        }
+
+        /* =========================================
  SMALL MOBILE DEVICES
 ========================================= */
 
-@media(max-width:480px){
+        @media(max-width:480px) {
 
-.hero{
-  padding-top:110px;
-}
+            .hero {
+                padding-top: 110px;
+            }
 
-.hero h1{
-  font-size:34px;
-}
+            .hero h1 {
+                font-size: 34px;
+            }
 
-.hero p{
-  font-size:14px;
-}
+            .hero p {
+                font-size: 14px;
+            }
 
-.content-box h2{
-  font-size:30px;
-}
+            .content-box h2 {
+                font-size: 30px;
+            }
 
-.card-pro{
-  padding:18px;
-}
-
-
-.navbar-brand{
-  font-size:18px;
-}
-
-}
+            .card-pro {
+                padding: 18px;
+            }
 
 
+            .navbar-brand {
+                font-size: 18px;
+            }
+
+        }
 
 
-/* =========================================
+
+
+        /* =========================================
  BETTER TOUCH DEVICES
 ========================================= */
 
-@media (hover:none){
+        @media (hover:none) {
 
-.card-pro:hover,
-.btn-primary:hover,
-.whatsapp:hover,
-.trust div:hover{
-  transform:none;
-}
+            .card-pro:hover,
+            .btn-primary:hover,
+            .whatsapp:hover,
+            .trust div:hover {
+                transform: none;
+            }
 
-}
-
-
-html,body{
-  overflow-x: hidden;
-}
-/* Prevent giant background text from overflowing */
-.hero::before{
-  max-width:100%;
-  overflow:hidden;
-}
-
-/* Prevent cards and images from pushing width */
-img{
-  max-width:100%;
-  height:auto;
-}
-
-/* Fix Bootstrap row overflow issue */
-.row{
-  margin-left:0;
-  margin-right:0;
-}
-
-/* Mobile fix */
-@media(max-width:768px){
-
-  .hero::before{
-    font-size:48px;
-    letter-spacing:2px;
-    white-space:normal;
-    text-align:center;
-    width:100%;
-    left:0;
-  }
-
- 
-
-  
+        }
 
 
-}
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Prevent giant background text from overflowing */
+        .hero::before {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        /* Prevent cards and images from pushing width */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Fix Bootstrap row overflow issue */
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        /* Mobile fix */
+        @media(max-width:768px) {
+
+            .hero::before {
+                font-size: 48px;
+                letter-spacing: 2px;
+                white-space: normal;
+                text-align: center;
+                width: 100%;
+                left: 0;
+            }
 
 
-@media(max-width:768px){
 
 
-.card-inner{
-  padding-bottom:30px;
-}
-
-}
 
 
-/* =========================================================
+        }
+
+
+        @media(max-width:768px) {
+
+
+            .card-inner {
+                padding-bottom: 30px;
+            }
+
+        }
+
+
+        /* =========================================================
 RESPONSIVE
 ========================================================= */
 
-@media(max-width:991px) {
+        @media(max-width:991px) {
 
-.hero-content {
-    text-align: center;
-}
+            .hero-content {
+                text-align: center;
+            }
 
-.hero p {
-    margin: auto;
-    margin-top: 30px;
-}
+            .hero p {
+                margin: auto;
+                margin-top: 30px;
+            }
 
-.card-inner {
-    padding: 40px;
-}
+            .card-inner {
+                padding: 40px;
+            }
 
-}
+        }
 
-@media(max-width:768px) {
+        @media(max-width:768px) {
 
-.hero {
-    min-height: auto;
-    padding: 150px 0 100px;
-}
+            .hero {
+                min-height: auto;
+                padding: 150px 0 100px;
+            }
 
-.hero h1 {
-    font-size: 58px;
-}
+            .hero h1 {
+                font-size: 58px;
+            }
 
-.hero-watermark {
-    font-size: 90px;
-    letter-spacing: 5px;
-}
+            .hero-watermark {
+                font-size: 90px;
+                letter-spacing: 5px;
+            }
 
-.card-inner {
-    padding: 28px;
-}
+            .card-inner {
+                padding: 28px;
+            }
 
-.form-title {
-    font-size: 34px;
-}
+            .form-title {
+                font-size: 34px;
+            }
 
-}
+        }
 
 
-@media (max-width: 768px) {
-  .hero-watermark {
-    font-size: 70px;
-    letter-spacing: 6px;
-    opacity: 0.03;
-  }
-}
+        @media (max-width: 768px) {
+            .hero-watermark {
+                font-size: 70px;
+                letter-spacing: 6px;
+                opacity: 0.03;
+            }
+        }
 
-@media (max-width: 480px) {
-  .hero-watermark {
-    font-size: 48px;
-    letter-spacing: 4px;
-    opacity: 0.025;
-  }
-}
-</style>
+        @media (max-width: 480px) {
+            .hero-watermark {
+                font-size: 48px;
+                letter-spacing: 4px;
+                opacity: 0.025;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- =========================================================
+    <!-- =========================================================
 BACKGROUND
 ========================================================= -->
 
-<div class="grid-bg"></div>
+    <div class="grid-bg"></div>
 
-<div class="ambient">
+    <div class="ambient">
 
-    <div class="glow glow1"></div>
-    <div class="glow glow2"></div>
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
 
-</div>
-<!-- NAV -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand text-white fw-bold" href="#">Bio-Mileager</a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto gap-4">
-        <li class="nav-item">
-          <a class="nav-link" href="/index.html"><i class="bi bi-house-door"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-box-seam"></i> Products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-building"></i> About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pages/Contact.html"><i class="bi bi-envelope"></i> Contact Us</a>
-        </li>
-      </ul>
     </div>
- 
-  </div>
-</nav>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="#">Bio-Mileager</a>
 
-<!-- ===== Hero Pro  -->
-<section class="hero">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div class="hero-watermark">
-        CONTACT
-    </div>
-
-    <div class="container">
-
-        <div class="hero-content reveal">
-
-            <div class="kicker">
-                GLOBAL INDUSTRIAL COMMUNICATION NETWORK
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html"><i class="bi bi-house-door"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-box-seam"></i> Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-building"></i> About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/Contact.html"><i class="bi bi-envelope"></i> Contact Us</a>
+                    </li>
+                </ul>
             </div>
 
-            <h1>
+        </div>
+    </nav>
 
-                ENGINEER <br>
+    <!-- ===== Hero Pro  -->
+    <section class="hero">
 
-                <span>THE FUTURE</span>
+        <div class="hero-watermark">
+            CONTACT
+        </div>
 
-            </h1>
+        <div class="container">
 
-            <p>
+            <div class="hero-content reveal">
 
-                Connect directly with the Bio-Mileager engineering division for
-                advanced industrial fuel systems,
-                laboratory-certified combustion technology,
-                dealership infrastructure,
-                and enterprise-scale deployment partnerships.
+                <div class="kicker">
+                    GLOBAL INDUSTRIAL COMMUNICATION NETWORK
+                </div>
 
-            </p>
+                <h1>
+
+                    ENGINEER <br>   
+
+                    <span>THE FUTURE</span>
+
+                </h1>
+
+                <p>
+
+                    Connect directly with the Bio-Mileager engineering division for
+                    advanced industrial fuel systems,
+                    laboratory-certified combustion technology,
+                    dealership infrastructure,
+                    and enterprise-scale deployment partnerships.
+
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-   <!-- =========================================================
+    <!-- =================
+     ========================================
 CONTACT SECTION
 ========================================================= -->
 
-<section class="section-space">
+    <section class="section-space">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="row g-4 align-items-stretch">
+            <div class="row g-4 align-items-stretch">
 
-            <!-- LEFT -->
+                <!-- LEFT -->
 
-            <div class="col-lg-5 reveal">
+                <div class="col-lg-5 reveal">
 
-                <div class="ultra-card h-100">
+                    <div class="ultra-card h-100">
 
-                    <div class="card-inner">
+                        <div class="card-inner">
 
-                        <div class="contact-item">
+                            <div class="contact-item">
 
-                            <div class="contact-icon">
-                                <i class="bi bi-buildings"></i>
-                            </div>
+                                <div class="contact-icon">
+                                    <i class="bi bi-buildings"></i>
+                                </div>
 
-                            <div>
-                                <small>HEADQUARTERS</small>
-                                <h5>Nashik Engineering Division</h5>
-                                <p>Maharashtra, India</p>
-                            </div>
-
-                        </div>
-
-                        <div class="contact-item">
-
-                            <div class="contact-icon">
-                                <i class="bi bi-telephone"></i>
-                            </div>
-
-                            <div>
-                                <small>COMMUNICATION LINE</small>
-                                <h5>Industrial Support Desk</h5>
-                                <p>+91 XXXXX XXXXX</p>
-                            </div>
-
-                        </div>
-
-                        <div class="contact-item">
-
-                            <div class="contact-icon">
-                                <i class="bi bi-envelope"></i>
-                            </div>
-
-                            <div>
-                                <small>MAIL SERVER</small>
-                                <h5>Official Email Address</h5>
-                                <p>info@biomileager.com</p>
-                            </div>
-
-                        </div>
-
-                        <div class="contact-item">
-
-                            <div class="contact-icon">
-                                <i class="bi bi-clock-history"></i>
-                            </div>
-
-                            <div>
-                                <small>ACTIVE HOURS</small>
-                                <h5>Operational Window</h5>
-                                <p>
-                                    Monday — Saturday <br>
-                                    09:00 AM — 07:00 PM
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <!-- TERMINAL -->
-
-                        <div class="terminal">
-
-                            <div class="terminal-top">
-
-                                <div class="dot red"></div>
-                                <div class="dot yellow"></div>
-                                <div class="dot green"></div>
+                                <div>
+                                    <small>HEADQUARTERS</small>
+                                    <h5>Nashik Engineering Division</h5>
+                                    <p>Maharashtra, India</p>
+                                </div>
 
                             </div>
 
-                            <div class="terminal-body">
+                            <div class="contact-item">
 
-                                > SYSTEM STATUS : ONLINE <br>
+                                <div class="contact-icon">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
 
-                                > INDUSTRIAL SUPPORT : ACTIVE <br>
+                                <div>
+                                    <small>COMMUNICATION LINE</small>
+                                    <h5>Industrial Support Desk</h5>
+                                    <p>+91 XXXXX XXXXX</p>
+                                </div>
 
-                                > GLOBAL NETWORK : STABLE <br>
+                            </div>
 
-                                > RESPONSE PROTOCOL : ENABLED
+                            <div class="contact-item">
+
+                                <div class="contact-icon">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+
+                                <div>
+                                    <small>MAIL SERVER</small>
+                                    <h5>Official Email Address</h5>
+                                    <p>info@biomileager.com</p>
+                                </div>
+
+                            </div>
+
+                            <div class="contact-item">
+
+                                <div class="contact-icon">
+                                    <i class="bi bi-clock-history"></i>
+                                </div>
+
+                                <div>
+                                    <small>ACTIVE HOURS</small>
+                                    <h5>Operational Window</h5>
+                                    <p>
+                                        Monday — Saturday <br>
+                                        09:00 AM — 07:00 PM
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <!-- TERMINAL -->
+
+                            <div class="terminal">
+
+                                <div class="terminal-top">
+
+                                    <div class="dot red"></div>
+                                    <div class="dot yellow"></div>
+                                    <div class="dot green"></div>
+
+                                </div>
+
+                                <div class="terminal-body">
+
+                                    > SYSTEM STATUS : ONLINE <br>
+
+                                    > INDUSTRIAL SUPPORT : ACTIVE <br>
+
+                                    > GLOBAL NETWORK : STABLE <br>
+
+                                    > RESPONSE PROTOCOL : ENABLED
+
+                                </div>
 
                             </div>
 
@@ -1323,62 +1339,62 @@ CONTACT SECTION
 
                 </div>
 
-            </div>
+                <!-- RIGHT -->
 
-            <!-- RIGHT -->
+                <div class="col-lg-7 reveal">
 
-            <div class="col-lg-7 reveal">
+                    <div class="ultra-card h-100">
 
-                <div class="ultra-card h-100">
+                        <div class="card-inner">
 
-                    <div class="card-inner">
-
-                        <div class="form-title">
-                            Initiate Communication
-                        </div>
-
-                        <form>
-
-                            <div class="row">
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Full Name">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Email Address">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Company / Organization">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Phone Number">
-                                </div>
-
-                                <div class="col-12">
-                                    <input type="text" class="form-control" placeholder="Subject">
-                                </div>
-
-                                <div class="col-12">
-                                    <textarea rows="7" class="form-control"
-                                        placeholder="Describe your industrial requirement..."></textarea>
-                                </div>
-
-                                <div class="col-12">
-
-                                    <button class="btn-ultra">
-
-                                        START COMMUNICATION
-
-                                    </button>
-
-                                </div>
-
+                            <div class="form-title">
+                                Initiate Communication
                             </div>
 
-                        </form>
+                            <form>
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Full Name">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="Email Address">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Company / Organization">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Phone Number">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <textarea rows="7" class="form-control"
+                                            placeholder="Describe your industrial requirement..."></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+
+                                        <button class="btn-ultra">
+
+                                            START COMMUNICATION
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+                        </div>
 
                     </div>
 
@@ -1386,101 +1402,100 @@ CONTACT SECTION
 
             </div>
 
+            <!-- MAP -->
+
+            <div class="map-wrap reveal">
+
+                <iframe src="https://www.google.com/maps?q=Nashik&output=embed" loading="lazy">
+                </iframe>
+
+            </div>
+
         </div>
 
-        <!-- MAP -->
+    </section>
 
-        <div class="map-wrap reveal">
 
-            <iframe src="https://www.google.com/maps?q=Nashik&output=embed" loading="lazy">
-            </iframe>
+
+    <!-- ====== Footer ======= -->
+
+    <footer class="footer-industry">
+
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Brand -->
+                <div class="col-md-4">
+                    <h4 class="fw-bold text-white">Bio-Mileager</h4>
+                    <p class="">
+                        Advanced fuel efficiency technology designed to improve mileage, reduce emissions,
+                        and enhance engine performance.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-md-2">
+                    <h6 class="text-white">Company</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/product.html">Products</a></li>
+                        <li><a href="/pages/Faq.html">FAQ</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="/pages/Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div class="col-md-3">
+                    <h6 class="text-white">Products</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Fuel Enhancer</a></li>
+                        <li><a href="#">Engine Cleaner</a></li>
+                        <li><a href="#">Industrial Oil Additive</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-3">
+                    <h6 class="text">Contact</h6>
+                    <!-- <p class="text mb-1">📞 +91 XXXXX XXXXX</p> -->
+                    <!-- <p class="text mb-1">✉ info@biomileager.com</p> -->
+                    <p class="text">📍 Nashik</p>
+                </div>
+
+            </div>
+
+            <hr class="mt-4" style="border-color: rgba(255,255,255,0.08);">
+
+            <div class="text-center  small py-3">
+                © 2026 Bio-Mileager. All Rights Reserved. Design & Developed by Dnyaneshwar Kolhe
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </footer>
 
 
 
-<!-- ====== Footer ======= -->
+    <!-- Script -->
 
-<footer class="footer-industry">
+    <script>
 
-  <div class="container">
-    <div class="row g-4">
+        window.addEventListener("scroll", () => {
 
-      <!-- Brand -->
-      <div class="col-md-4">
-        <h4 class="fw-bold text-white">Bio-Mileager</h4>
-        <p class="">
-          Advanced fuel efficiency technology designed to improve mileage, reduce emissions,
-          and enhance engine performance.
-        </p>
-      </div>
+            const navbar = document.querySelector(".navbar");
 
-      <!-- Links -->
-      <div class="col-md-2">
-        <h6 class="text-white">Company</h6>
-        <ul class="list-unstyled footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
 
-      <!-- Products -->
-      <div class="col-md-3">
-        <h6 class="text-white">Products</h6>
-        <ul class="list-unstyled footer-links">
-          <li><a href="#">Fuel Enhancer</a></li>
-          <li><a href="#">Engine Cleaner</a></li>
-          <li><a href="#">Industrial Oil Additive</a></li>
-        </ul>
-      </div>
+        });
 
-      <!-- Contact -->
-      <div class="col-md-3">
-        <h6 class="text">Contact</h6>
-        <!-- <p class="text mb-1">📞 +91 XXXXX XXXXX</p> -->
-        <!-- <p class="text mb-1">✉ info@biomileager.com</p> -->
-        <p class="text">📍 Nashik</p>
-      </div>
-
-    </div>
-
-    <hr class="mt-4" style="border-color: rgba(255,255,255,0.08);">
-
-    <div class="text-center  small py-3">
-      © 2026 Bio-Mileager. All Rights Reserved. Design & Developed by Dnyaneshwar Kolhe
-    </div>
-
-  </div>
-
-</footer>
-
-
-
-<!-- Script -->
-
-<script>
-  
-    window.addEventListener("scroll", () => {
-    
-      const navbar = document.querySelector(".navbar");
-    
-      if(window.scrollY > 50){
-        navbar.classList.add("scrolled");
-      }else{
-        navbar.classList.remove("scrolled");
-      }
-    
-    });
-    
     </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
 
+</html>
