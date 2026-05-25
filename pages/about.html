@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Bio-Mileager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/ css/style2.css" />
+    <style>
+      .tech-bg {
+        position: fixed;
+        inset: 0;
+
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+
+        background-size: 60px 60px;
+
+        mask-image: radial-gradient(
+          circle at center,
+          black 40%,
+          transparent 95%
+        );
+
+        z-index: -2;
+      }
+
+      .navbar {
+      background: rgba(0, 0, 0, 0.35);
+      /* semi-transparent */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      /* Safari support */
+      transition: all 0.3s ease;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      padding: 12px 0;
+    }
+
+    .nav-link {
+      color: var(--muted) !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #fff !important;
+    }
+    .nav-link {
+      position: relative;
+      color: #ccc !important;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link i {
+      margin-right: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Industrial underline effect */
+    /* .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #00ffcc;
+  transition: width 0.3s ease;
+} */
+
+    /* Hover effects */
+    .nav-link:hover {
+      color: #00ffcc;
+      transform: translateY(-2px);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Icon animation */
+    .nav-link:hover i {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 5px #00ffcc;
+      }
+
+      50% {
+        text-shadow: 0 0 15px #00ffcc;
+      }
+
+      100% {
+        text-shadow: 0 0 5px #00ffcc;
+      }
+    }
+
+    .nav-link:hover {
+      animation: pulseGlow 1s infinite;
+      transform: translateY(-3px) scale(1.05);
+
+    }
+
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: none;
+      width: 25px;
+      height: 2px;
+      background: #00ffcc;
+      position: relative;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background: #00ffcc;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    .navbar-toggler-icon::before {
+      top: -8px;
+    }
+
+    .navbar-toggler-icon::after {
+      top: 8px;
+    }
+    .footer-industry {
+      background: #0B0F14;
+      padding: 60px 0 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+
+
+    /* links */
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      padding-left: 4px;
+    }
+
+    /* headings */
+    .footer-industry h6 {
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    /* smooth text feel */
+    .footer-industry p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="tech-bg"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">Bio-Mileager</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-4">
+          <li class="nav-item">
+            <a class="nav-link" href="/"><i class="bi bi-house-door"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/product.html"><i class="bi bi-box-seam"></i> Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/become-our-distributor.html"><i class="bi bi-box-seam"></i> Become Our Partner</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/investor.html"><i class="bi bi-box-seam"></i> Investor Relations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/about.html"><i class="bi bi-building"></i> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/Contact.html"><i class="bi bi-envelope"></i> Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+    <main>
+      <!-- Hero -->
+      <section class="section-pad">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6 reveal">
+              <h1 class="hero-title mb-3">ABOUT US</h1>
+              <p class="hero-subtitle mb-2">The First Fuel Saver of India</p>
+              <p class="text-muted-custom mb-3">
+                Save Fuel, Save Nature, Save Money
+              </p>
+              <p class="text-muted-custom mb-3">
+                Shreenivas Innovations Pvt. Ltd. was started by Mr. Deepak Rane
+                in the year 2010. With lot of research and hard work starting
+                from 2008, Shreenivas Innovations was born. Mr. Deepak Rane is a
+                nature lover and was interested in doing something that would
+                save the environment from pollution.
+              </p>
+              <p class="text-muted-custom mb-4">
+                He took the help of Ayurveda and under his father's Mr. Prakash
+                Rane's guidance started working on the development of Bio
+                Additives and then Bio Fuel products. After the immense research
+                of 5 years helped Mr. Rane to invent the best formulation of
+                Petrol and Diesel additive that saved the fuel up to 40% and
+                also increased the life of engines and other parts related to
+                it. The perfect formula was invented after multiple experiments
+                and it was ready to be launched in the market in the year 2020.
+              </p>
+              <a href="#" class="btn btn-glow">Contact Us</a>
+            </div>
+            <div class="col-lg-6 reveal">
+              <img
+                class="hero-img"
+                src="/images/team.webp"
+                alt="Bio-Mileager product placeholder"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Company Story -->
+      <section class="section-pad pt-0">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7 reveal">
+              <h2 class="fw-bold mb-3">COMPANY DETAILS</h2>
+              <p class="text-muted-custom mb-3">
+                Mr. Rane still continues doing research daily to manufacture
+                more products for conserving our economical fuel for the
+                country's growth. He wants to set a global trade mark in every
+                country economical and natural with lesser the carbon footprint
+                by boosting Green Fuel Efficiency.
+              </p>
+              <p class="text-muted-custom mb-3">
+                The company now serves Auto and Industrial including oils and
+                greases. Today, we have dealers and distributors networks
+                throughout Maharashtra and Goa. Also, we have their distributors
+                in many other states of India.
+              </p>
+              <p class="text-muted-custom mb-0">
+                In 2013, Mr. Rane invented the remanufacturing process of
+                Biofuel with the help of waste plastic. This process turns waste
+                plastic into Biofuel as well as highly stored to be used by the
+                consumers and large scale industries.
+              </p>
+            </div>
+            <div class="col-lg-5 reveal">
+              <img
+                src="/images/fuel.png"
+                alt="fuel"
+                class="img-fluid rounded-3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision and Mission -->
+      <section class="section-pad pt-0">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-6 reveal">
+              <div class="feature-card hover-lift p-4">
+                <img
+                  src="/images/vision.png"
+                  alt="vision"
+                  class="img-fluid mb-4 rounded-3"
+                />
+                <h3 class="h4 fw-bold mb-1">OUR VISION</h3>
+                <p class="text-muted-custom mb-4">
+                  Our Motto is to transform the Earth into a better future with
+                  cleaner and greener fresher Air and World free from Carbon
+                  effects and Global Warming.
+                </p>
+                <a href="#" class="btn btn-glow btn-sm px-4">CONTACT US</a>
+              </div>
+            </div>
+            <div class="col-md-6 reveal">
+              <div class="feature-card hover-lift p-4">
+                <img
+                  src="/images/missionn.png"
+                  alt="mission"
+                  class="img-fluid mb-4 rounded-3"
+                />
+                <h3 class="h4 fw-bold mb-1">OUR MISSION</h3>
+                <p class="text-muted-custom mb-4">
+                  We are on a mission to protect our environment for future by
+                  offering "BIO MILEAGER" We aim to "SAVE FUEL, SAVE NATURE,
+                  SAVE MONEY"
+                </p>
+                <a href="#" class="btn btn-glow btn-sm px-4">CONTACT US</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Directors -->
+      <section class="section-pad pt-0">
+        <div class="container">
+          <h2 class="fw-bold mb-4 reveal">Directors</h2>
+          <div class="row g-4">
+            <div class="col-md-6 reveal text-center">
+              <div class="director-card hover-lift p-4">
+                <img
+                  src="/images/deepak_rane.jpeg"
+                  class="img-fluid mx-auto d-block rounded shadow"
+                  style="max-height: 300px; object-fit: cover"
+                  alt="deepak_rane"
+                />
+                <h3 class="h5 mb-2 mt-4">Mr. Deepak Prakash Rane</h3>
+                <p class="text-muted-custom mb-0">Managing Director</p>
+              </div>
+            </div>
+            <div class="col-md-6 reveal text-center">
+              <div class="director-card hover-lift p-4">
+                <img
+                  src="/images/prakash_rane.webp"
+                  class="img-fluid mx-auto d-block rounded shadow"
+                  style="max-height: 300px; object-fit: cover"
+                  alt="prakash_rane"
+                />
+                <h3 class="h5 mb-2 mt-4">Mr. Prakash Ramchandra Rane</h3>
+                <p class="text-muted-custom mb-0">Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards -->
+      <section class="section-pad pt-0">
+        <div class="container">
+          <h2 class="fw-bold mb-4 reveal">Awards & Recognition</h2>
+          <p class="text-muted-custom mb-4 reveal">
+            Bio-Mileager Petrol and Diesel Saver
+          </p>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4 reveal">
+              <article class="award-card hover-lift p-3">
+                <div class="award-thumb img-fluid">
+                  <img src="/images/CSR.webp" alt="Award placeholder 1" />
+                </div>
+                <p class="text-muted-custom mb-0">
+                  India CSR Award for the Most Innovative Herbal Multimagical
+                  Fuel Additive on December 10th, 2021 at Bengaluru.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal">
+              <article class="award-card hover-lift p-3">
+                <div class="award-thumb img-fluid">
+                  <img src="/images/award2.webp" alt="Award placeholder 2" />
+                </div>
+                <p class="text-muted-custom mb-0">
+                  We have Received & Awarded by the Chief Minister of Karnataka
+                  & Vice Chairman Niti Aayog for the Green Leadership Award
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal">
+              <article class="award-card hover-lift p-3">
+                <div class="award-thumb img-fluid">
+                  <img src="/images/inovation.webp" alt="Award placeholder 3" />
+                </div>
+                <p class="text-muted-custom mb-0">
+                  Selected in India's 500 Challenger brands by your story.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Banner -->
+      <section class="pb-5">
+        <div class="container">
+          <div class="cta-banner text-center reveal">
+            <h2 class="fw-bold mb-3">BIO-MILEAGER</h2>
+            <p class="text-muted-custom mb-3">
+              Save your Petrol and Diesel upto 40% guaranteed!
+            </p>
+            <a href="#" class="btn btn-glow">BUY NOW</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-industry">
+
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Brand -->
+        <div class="col-md-4">
+          <h4 class="fw-bold text-white">Bio-Mileager</h4>
+          <p class="">
+            Advanced fuel efficiency technology designed to improve mileage, reduce emissions,
+            and enhance engine performance.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="col-md-2">
+          <h6 class="text-white">Company</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="/pages/product.html">Products</a></li>
+            <li><a href="/pages/product.html">Become Our Partner</a></li>
+            <li><a href="/pages/product.html">Investor Relations</a></li>
+            <li><a href="/pages/Faq.html">FAQ</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="/pages/Contact.html">Contact</a></li>
+            <li><a href="/pages/award-and-certification.html">Awards & Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Products -->
+        <div class="col-md-3">
+          <h6 class="text-white">Products</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Fuel Enhancer</a></li>
+            <li><a href="#">Engine Cleaner</a></li>
+            <li><a href="#">Industrial Oil Additive</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3">
+          <h6 class="text">Contact</h6>
+          <!-- <p class="text mb-1">📞 +91 XXXXX XXXXX</p> -->
+          <!-- <p class="text mb-1">✉ info@biomileager.com</p> -->
+          <p class="text">📍 Nashik</p>
+        </div>
+
+      </div>
+
+      <hr class="mt-4" style="border-color: rgba(255,255,255,0.08);">
+
+      <div class="text-center  small py-3">
+        © 2026 Bio-Mileager. All Rights Reserved. Design & Developed by Dnyaneshwar Kolhe
+      </div>
+
+    </div>
+
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Simple fade-in on scroll with Intersection Observer
+      const revealElements = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+
+      revealElements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
